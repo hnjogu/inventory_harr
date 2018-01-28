@@ -1,0 +1,39 @@
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\bin\Debug\practice_lesson3.exe.config
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\bin\Debug\practice_lesson3.exe
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\bin\Debug\practice_lesson3.pdb
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\bin\Debug\MySql.Data.dll
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\bin\Debug\MySql.Data.Entity.EF5.dll
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\bin\Debug\MySql.Fabric.Plugin.dll
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\bin\Debug\MySql.Web.dll
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\bin\Debug\MySql.Data.xml
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\bin\Debug\MySql.Data.Entity.EF5.xml
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\bin\Debug\MySql.Data.Entity.EF6.xml
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\bin\Debug\MySql.Web.xml
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\obj\Debug\practice_lesson3.csprojResolveAssemblyReference.cache
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\obj\Debug\practice_lesson3.csproj.practice_lesson3.exe.config
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\obj\Debug\practice_lesson3.inventory.resources
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\obj\Debug\practice_lesson3.Properties.Resources.resources
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\obj\Debug\practice_lesson3.csproj.GenerateResource.Cache
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\obj\Debug\practice_lesson3.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\obj\Debug\practice_lesson3.exe
+C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\obj\Debug\practice_lesson3.pdb
+I:\machine one\harristars tutorial\c# tutorial\lessons\c#_programs\practice_lesson3\practice_lesson3\bin\Debug\practice_lesson3.exe.config
+I:\machine one\harristars tutorial\c# tutorial\lessons\c#_programs\practice_lesson3\practice_lesson3\obj\Debug\practice_lesson3.exe
+I:\machine one\harristars tutorial\c# tutorial\lessons\c#_programs\practice_lesson3\practice_lesson3\obj\Debug\practice_lesson3.pdb
+G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\practice_lesson3.exe.config
+G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.exe
+G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.pdb
+G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\practice_lesson3.exe
+G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\practice_lesson3.pdb
+G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Data.Entity.EF5.dll
+G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Data.Entity.EF6.dll
+G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Fabric.Plugin.dll
+G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Data.Entity.EF5.xml
+G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Data.Entity.EF6.xml
+G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.csprojResolveAssemblyReference.cache
+G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.csproj.practice_lesson3.exe.config
+G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.inventory.resources
+G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.Properties.Resources.resources
+G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.csproj.GenerateResource.Cache
+G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\Zen.Barcode.Core.dll
