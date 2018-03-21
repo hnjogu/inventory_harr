@@ -29,13 +29,7 @@ namespace practice_lesson3
 
         private void OpenFile(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = openFileDialog.FileName;
-            }
+            dashboard.Visible = true;
         }
 
         private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,6 +96,11 @@ namespace practice_lesson3
             {
                 childForm.Close();
             }
+        }
+
+        private void dashboard_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

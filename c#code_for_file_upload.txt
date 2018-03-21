@@ -1,0 +1,7 @@
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                string FileName = openFileDialog.FileName;
+            }

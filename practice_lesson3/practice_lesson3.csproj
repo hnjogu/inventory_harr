@@ -49,8 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>practice_lesson3.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
@@ -90,6 +89,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_user.Designer.cs">
+      <DependentUpon>Add_user.cs</DependentUpon>
+    </Compile>
     <Compile Include="home_screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +127,9 @@
     <Compile Include="userlogin.Designer.cs">
       <DependentUpon>userlogin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add_user.resx">
+      <DependentUpon>Add_user.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="home_screen.resx">
       <DependentUpon>home_screen.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +185,30 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainlogo_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainlogo_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainlogo_n12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\products.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discount.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,7 +16,7 @@ namespace practice_lesson3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new inventory());
+            Application.Run(new home_screen());
         }
     }
 }
