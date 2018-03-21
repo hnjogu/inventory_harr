@@ -1,0 +1,18 @@
+public static string IncrementID2(string startValue, int numNonDigits)
+{
+    int max = 999999999;
+    string[] parts = startValue.Split('/');
+    // is it safe to assume that the third splitted string is the number you're looking for?
+    int number;
+    if (Int32.TryParse(parts[2], out number))
+    {
+        number++;
+    }
+    else
+    {
+        if the number doesn't parse correctly, set it to zero
+        number = 0;
+    }
+    number = (number > max) ? 1 : number;
+    return string.Format("PC{0:D9}/POS", number);
+}

@@ -41,6 +41,19 @@
             this.entry_date = new System.Windows.Forms.DateTimePicker();
             this.dataload_inventory = new System.Windows.Forms.DataGridView();
             this.refresh = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.quantity = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.suplier = new System.Windows.Forms.TextBox();
+            this.Expiry_date = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.manufacturer = new System.Windows.Forms.TextBox();
+            this.company = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.product_category = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataload_inventory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +113,7 @@
             this.label4.BackColor = System.Drawing.Color.DarkGreen;
             this.label4.Font = new System.Drawing.Font("Old English Text MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(84, 9);
+            this.label4.Location = new System.Drawing.Point(78, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(354, 34);
             this.label4.TabIndex = 6;
@@ -144,7 +157,7 @@
             this.entry_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.entry_date.Location = new System.Drawing.Point(197, 57);
             this.entry_date.Name = "entry_date";
-            this.entry_date.Size = new System.Drawing.Size(137, 20);
+            this.entry_date.Size = new System.Drawing.Size(113, 20);
             this.entry_date.TabIndex = 11;
             // 
             // dataload_inventory
@@ -159,7 +172,7 @@
             // refresh
             // 
             this.refresh.BackColor = System.Drawing.Color.DarkGreen;
-            this.refresh.Location = new System.Drawing.Point(217, 427);
+            this.refresh.Location = new System.Drawing.Point(208, 427);
             this.refresh.Name = "refresh";
             this.refresh.Size = new System.Drawing.Size(73, 25);
             this.refresh.TabIndex = 13;
@@ -167,12 +180,136 @@
             this.refresh.UseVisualStyleBackColor = false;
             this.refresh.Click += new System.EventHandler(this.refresh_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(345, 60);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Quantity";
+            // 
+            // quantity
+            // 
+            this.quantity.Location = new System.Drawing.Point(408, 57);
+            this.quantity.Name = "quantity";
+            this.quantity.Size = new System.Drawing.Size(74, 20);
+            this.quantity.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(332, 103);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Suplier_Code";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // suplier
+            // 
+            this.suplier.Location = new System.Drawing.Point(408, 100);
+            this.suplier.Name = "suplier";
+            this.suplier.Size = new System.Drawing.Size(74, 20);
+            this.suplier.TabIndex = 17;
+            this.suplier.TextChanged += new System.EventHandler(this.suplier_TextChanged);
+            // 
+            // Expiry_date
+            // 
+            this.Expiry_date.CustomFormat = "yyyy-MM-dd";
+            this.Expiry_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Expiry_date.Location = new System.Drawing.Point(542, 54);
+            this.Expiry_date.Name = "Expiry_date";
+            this.Expiry_date.Size = new System.Drawing.Size(113, 20);
+            this.Expiry_date.TabIndex = 18;
+            this.Expiry_date.ValueChanged += new System.EventHandler(this.Expiry_date_ValueChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(539, 34);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Expiry_date";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(232, 34);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 13);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "purchase_date";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(488, 103);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 13);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Manufacturer";
+            // 
+            // manufacturer
+            // 
+            this.manufacturer.Location = new System.Drawing.Point(564, 103);
+            this.manufacturer.Name = "manufacturer";
+            this.manufacturer.Size = new System.Drawing.Size(91, 20);
+            this.manufacturer.TabIndex = 22;
+            // 
+            // company
+            // 
+            this.company.Location = new System.Drawing.Point(762, 51);
+            this.company.Name = "company";
+            this.company.Size = new System.Drawing.Size(95, 20);
+            this.company.TabIndex = 23;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(671, 54);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 13);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Company";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(661, 107);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(92, 13);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "Product_Category";
+            // 
+            // product_category
+            // 
+            this.product_category.FormattingEnabled = true;
+            this.product_category.Location = new System.Drawing.Point(762, 104);
+            this.product_category.Name = "product_category";
+            this.product_category.Size = new System.Drawing.Size(95, 21);
+            this.product_category.TabIndex = 27;
+            // 
             // inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(882, 455);
+            this.Controls.Add(this.product_category);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.company);
+            this.Controls.Add(this.manufacturer);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Expiry_date);
+            this.Controls.Add(this.suplier);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.quantity);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.refresh);
             this.Controls.Add(this.dataload_inventory);
             this.Controls.Add(this.entry_date);
@@ -212,6 +349,19 @@
         private System.Windows.Forms.DateTimePicker entry_date;
         private System.Windows.Forms.DataGridView dataload_inventory;
         private System.Windows.Forms.Button refresh;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox quantity;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox suplier;
+        private System.Windows.Forms.DateTimePicker Expiry_date;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox manufacturer;
+        private System.Windows.Forms.TextBox company;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox product_category;
     }
 }
 

@@ -25,7 +25,7 @@ namespace practice_lesson3
         {
 
             //string inserQuery = "INSERT into inventory_simple.inventory_table(barcode,product_name,price,date) values('" + barcode.Text + "','" + productname.Text + "','" + price.Text + "'," + dateTimePicker.Text + ")";
-            string inserQuery = "INSERT into inventory_simple.inventory_table(product_code,product_name,price,entry_date) values('" + product_code.Text + "','" + productname.Text + "','" + price.Text + "'," + entry_date.Text + ")";
+            string inserQuery = "INSERT into inventory_simple.inventory_table(product_code,product_name,price,entry_date,quantity,suplier_code,expiry_date,manufacturer,company,product_category) values('" + product_code.Text + "','" + productname.Text + "','" + price.Text + "','" + entry_date.Text + "','" + quantity.Text + "','" + suplier.Text + "','" + Expiry_date.Text + "','" + manufacturer.Text + "','" + company.Text + "','" + product_category.Text + "')";
             connection.Open();
             MySqlCommand command = new MySqlCommand(inserQuery, connection);
 
@@ -57,6 +57,11 @@ namespace practice_lesson3
             //product_code.Clear();
             productname.Clear();
             price.Clear();
+            quantity.Clear();
+            suplier.Clear();
+            manufacturer.Clear();
+            company.Clear();
+            	
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -69,25 +74,51 @@ namespace practice_lesson3
 
         }
         //auto product number
-        static string IncrementID(string startValue, int numNonDigits)
-        {
-            string nonDigits = startValue.Substring(0, numNonDigits);
-            int len = startValue.Length - numNonDigits;
-            int number = int.Parse(startValue.Substring(numNonDigits));
-            number++;
-            if (number >= Math.Pow(10, len)) number = 1; // start again at 1
-            return String.Format("{0}{1:D" + len.ToString() + "}", nonDigits, number);
-        }
+                //static string IncrementID(string startValue, int numNonDigits)
+              //  {
+               //     string nonDigits = startValue.Substring(0, numNonDigits);
+                  //  int len = startValue.Length - numNonDigits;
+                //    int number = int.Parse(startValue.Substring(numNonDigits));
+                //    number++;
+                //    if (number >= Math.Pow(10, len)) number = 1; // start again at 1
+                 //   return String.Format("{0}{1:D" + len.ToString() + "}", nonDigits, number);
+                //}
+        public static string IncrementID2(string startValue, int numNonDigits)
+                {
+                    int max = 999999999;
+                    string[] parts = startValue.Split('/');
+                    // is it safe to assume that the third splitted string is the number you're looking for?
+                    int number;
+                    if (Int32.TryParse(parts[2], out number))
+                    {
+                        number++;
+                    }
+                    else
+                    {
+                        //if the number doesn't parse correctly, set it to zero number = 0;
+                    }
+                    number = (number > max) ? 1 : number;
+                    return string.Format("PC{0:D9}/POS", number);
+                }
         private void Genarate_productcode()
         {
-            product_code.Text = IncrementID("QIEpl/PO/0000009", 9); // produces QIEpl/PO/0000010 // C00011 PCI0001
+            //product_code.Text = IncrementID2("",9);
+
+
+
+            //product_code.Text = IncrementID2("startValue",9);
+           //product_code.Text = IncrementID2(" ", 9); // produces QIEpl/PO/0000010 // C00011 PCI0001
+            //IncrementID2 = product_code;
+           //product_code.Text = IncrementID2("startvalue" , 9);
+            //product_code.Text = IncrementID2("", 9);
+           
         } 
 
         public void loaddata()
         {
             string connectionString = "datasource=localhost;port=3306;username=root;password="; //Set your MySQL connection string here.
             //string query = "select * from inventory_simple.inventory_table"; // set query to fetch data "Select * from tabelname"; 
-            string query = "select product_code,product_name,price,entry_date from inventory_simple.inventory_table ";
+            string query = "select product_code,product_name,price,entry_date,expiry_date,manufacturer,company,product_category from inventory_simple.inventory_table ";
             using (MySqlConnection conn = new MySqlConnection(connectionString))//using (MySqlConnection conn = new MySqlConnection(connStr))
             {
                 using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
@@ -130,7 +161,7 @@ namespace practice_lesson3
 
         private void product_code_TextChanged(object sender, EventArgs e)
         {
-
+            //IncrementID2();
         }
 
         private void update_Click(object sender, EventArgs e)
@@ -160,6 +191,24 @@ namespace practice_lesson3
 
 
             connection.Close();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Expiry_date_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void suplier_TextChanged(object sender, EventArgs e)
+        {
+            //Form f = new Form();
+            //f.ShowDialog(this);
+            searchdialog_box searchdialog_box = new searchdialog_box();
+            searchdialog_box.Show();
         }
     }
 }

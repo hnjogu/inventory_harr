@@ -1,0 +1,16 @@
+CREATE TRIGGER  product_id
+AFTER INSERT 
+ON test FOR EACH ROW
+BEGIN
+    UPDATE test SET textid = concat('PC',LPAD(NEW.id, 5,'0'), '/POS')
+    WHERE id=NEW.id;
+END;
+DELIMITER ;
+
+
+second------------
+CREATE TRIGGER  product_code
+AFTER INSERT 
+ON test FOR EACH ROW
+UPDATE test SET textid = concat('PC',LPAD(NEW.id, 5,'0'), '/POS')
+WHERE id=NEW.id;

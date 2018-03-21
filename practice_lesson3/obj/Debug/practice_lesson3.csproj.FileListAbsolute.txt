@@ -21,19 +21,3 @@ C:\Users\Admin\source\repos\practice_lesson3\practice_lesson3\obj\Debug\practice
 I:\machine one\harristars tutorial\c# tutorial\lessons\c#_programs\practice_lesson3\practice_lesson3\bin\Debug\practice_lesson3.exe.config
 I:\machine one\harristars tutorial\c# tutorial\lessons\c#_programs\practice_lesson3\practice_lesson3\obj\Debug\practice_lesson3.exe
 I:\machine one\harristars tutorial\c# tutorial\lessons\c#_programs\practice_lesson3\practice_lesson3\obj\Debug\practice_lesson3.pdb
-G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\practice_lesson3.exe.config
-G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.exe
-G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.pdb
-G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\practice_lesson3.exe
-G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\practice_lesson3.pdb
-G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Data.Entity.EF5.dll
-G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Data.Entity.EF6.dll
-G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Fabric.Plugin.dll
-G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Data.Entity.EF5.xml
-G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Data.Entity.EF6.xml
-G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.csprojResolveAssemblyReference.cache
-G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.csproj.practice_lesson3.exe.config
-G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.inventory.resources
-G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.Properties.Resources.resources
-G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.csproj.GenerateResource.Cache
-G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\Zen.Barcode.Core.dll
