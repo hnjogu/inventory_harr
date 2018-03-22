@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace practice_lesson3
 {
@@ -29,6 +30,16 @@ namespace practice_lesson3
 
         private void OpenFile(object sender, EventArgs e)
         {
+            report.Visible = true;
+            btnReport.Visible = true;
+            product_button.Visible = true;
+            suppliers_button.Visible = true;
+            adduser_button.Visible = true;
+            sales_button.Visible = true;
+            products_labels.Visible = true;
+            Sales_label.Visible = true;
+            suppliers_label.Visible = true;
+            add_users_label.Visible = true;
             dashboard.Visible = true;
         }
 
@@ -62,12 +73,12 @@ namespace practice_lesson3
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
+            //toolStrip.Visible = toolBarToolStripMenuItem.Checked;
         }
 
         private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
+            //statusStrip.Visible = statusBarToolStripMenuItem.Checked;
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,5 +113,100 @@ namespace practice_lesson3
         {
             
         }
+
+        private void products_Click(object sender, EventArgs e)
+        {
+
+           
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            product_guidebutton.Visible = true;
+            productguide.Visible = true;
+
+        }
+
+        private void suppliers_button_Click(object sender, EventArgs e)
+        {
+            supplier_guidebutton.Visible = true;
+            supplierguide.Visible = true;
+        }
+
+        private void adduser_button_Click(object sender, EventArgs e)
+        {
+            Adduser_guidebutton.Visible = true;
+            User_settingsbutton.Visible = true;
+            adduserguide.Visible = true;
+            
+        }
+
+        private void sales_button_Click(object sender, EventArgs e)
+        {
+           sale_guidebutton.Visible = true;
+           salesguide.Visible = true;
+        }
+
+        private void product_guidebutton_Click(object sender, EventArgs e)
+        {
+            inventory inventory = new inventory();
+            inventory.Show();
+            product_guidebutton.Visible = false;
+            productguide.Visible = false;
+            
+        }
+
+        private void supplier_guidebutton_Click(object sender, EventArgs e)
+        {
+            supplier supplier = new supplier();
+            supplier.Show();
+            supplier_guidebutton.Visible = false;
+            supplierguide.Visible = false;
+
+        }
+
+        private void Adduser_guidebutton_Click(object sender, EventArgs e)
+        {
+            Add_user Add_user = new Add_user();
+            Add_user.Show();
+            Adduser_guidebutton.Visible = false;
+            User_settingsbutton.Visible = false;
+            adduserguide.Visible = false;
+        }
+
+        private void sale_guidebutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picMinimize_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+  
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("A you sure you want to exit");
+            {
+                Application.Exit();
+            }
+        }   
     }
 }

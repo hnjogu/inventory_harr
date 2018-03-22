@@ -115,5 +115,10 @@ namespace practice_lesson3
 
             connection.Close();
         }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

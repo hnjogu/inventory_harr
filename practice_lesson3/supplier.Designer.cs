@@ -49,6 +49,7 @@
             this.Submit = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
             this.dataload_supplier = new System.Windows.Forms.DataGridView();
+            this.close = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataload_supplier)).BeginInit();
             this.SuspendLayout();
             // 
@@ -236,12 +237,24 @@
             this.dataload_supplier.Size = new System.Drawing.Size(735, 204);
             this.dataload_supplier.TabIndex = 23;
             // 
+            // close
+            // 
+            this.close.Location = new System.Drawing.Point(588, 416);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(58, 27);
+            this.close.TabIndex = 24;
+            this.close.Text = "Cancel";
+            this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // supplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(759, 444);
+            this.ControlBox = false;
+            this.Controls.Add(this.close);
             this.Controls.Add(this.dataload_supplier);
             this.Controls.Add(this.delete);
             this.Controls.Add(this.refresh);
@@ -266,6 +279,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "supplier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "supplier";
             this.Load += new System.EventHandler(this.supplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataload_supplier)).EndInit();
@@ -297,5 +311,6 @@
         private System.Windows.Forms.Button Submit;
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.DataGridView dataload_supplier;
+        private System.Windows.Forms.Button close;
     }
 }

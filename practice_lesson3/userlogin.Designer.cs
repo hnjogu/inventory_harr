@@ -109,6 +109,7 @@
             this.cmdcancel.Text = "&Cancel";
             this.cmdcancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdcancel.UseVisualStyleBackColor = true;
+            this.cmdcancel.Click += new System.EventHandler(this.cmdcancel_Click);
             // 
             // cmdLogin
             // 

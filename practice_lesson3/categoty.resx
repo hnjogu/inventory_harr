@@ -117,53 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="delivery" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delivery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="products" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\products.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mainlogo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mainlogo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="discount" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\discount.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mainlogo_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mainlogo_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mainlogo_n12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mainlogo_n12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel4.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mainlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mainlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user-add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="discount1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\discount1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minimixe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimixe.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
   </data>
 </root>

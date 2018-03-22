@@ -68,6 +68,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "searchdialog_box";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "searchdialog_box";
             this.ResumeLayout(false);
             this.PerformLayout();

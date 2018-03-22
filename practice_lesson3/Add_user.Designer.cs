@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_user));
             this.cmdcancel = new System.Windows.Forms.Button();
             this.cmdupdate = new System.Windows.Forms.Button();
-            this.cmbaccnttype = new System.Windows.Forms.ComboBox();
             this.Label11 = new System.Windows.Forms.Label();
             this.txtconfirm = new System.Windows.Forms.TextBox();
             this.Label10 = new System.Windows.Forms.Label();
@@ -41,7 +40,6 @@
             this.Label8 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtcontact = new System.Windows.Forms.TextBox();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtmname = new System.Windows.Forms.TextBox();
@@ -54,9 +52,11 @@
             this.Label3 = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.Panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            this.accounttype = new System.Windows.Forms.ComboBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.GroupBox1.SuspendLayout();
             this.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmdcancel
@@ -69,6 +69,7 @@
             this.cmdcancel.TabIndex = 15;
             this.cmdcancel.Text = "&Cancel";
             this.cmdcancel.UseVisualStyleBackColor = true;
+            this.cmdcancel.Click += new System.EventHandler(this.cmdcancel_Click);
             // 
             // cmdupdate
             // 
@@ -80,19 +81,7 @@
             this.cmdupdate.TabIndex = 14;
             this.cmdupdate.Text = "&Update";
             this.cmdupdate.UseVisualStyleBackColor = true;
-            // 
-            // cmbaccnttype
-            // 
-            this.cmbaccnttype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbaccnttype.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbaccnttype.FormattingEnabled = true;
-            this.cmbaccnttype.Items.AddRange(new object[] {
-            "Administrator",
-            "Cashier"});
-            this.cmbaccnttype.Location = new System.Drawing.Point(432, 86);
-            this.cmbaccnttype.Name = "cmbaccnttype";
-            this.cmbaccnttype.Size = new System.Drawing.Size(122, 21);
-            this.cmbaccnttype.TabIndex = 9;
+            this.cmdupdate.Click += new System.EventHandler(this.cmdupdate_Click);
             // 
             // Label11
             // 
@@ -183,17 +172,6 @@
             this.Label1.Size = new System.Drawing.Size(254, 23);
             this.Label1.TabIndex = 1;
             this.Label1.Text = "Employee Account Profile";
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
-            this.PictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(45, 38);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox1.TabIndex = 0;
-            this.PictureBox1.TabStop = false;
             // 
             // txtcontact
             // 
@@ -293,7 +271,7 @@
             // 
             // GroupBox1
             // 
-            this.GroupBox1.Controls.Add(this.cmbaccnttype);
+            this.GroupBox1.Controls.Add(this.accounttype);
             this.GroupBox1.Controls.Add(this.Label11);
             this.GroupBox1.Controls.Add(this.txtconfirm);
             this.GroupBox1.Controls.Add(this.Label10);
@@ -327,22 +305,45 @@
             this.Panel1.Size = new System.Drawing.Size(510, 43);
             this.Panel1.TabIndex = 12;
             // 
+            // accounttype
+            // 
+            this.accounttype.FormattingEnabled = true;
+            this.accounttype.Location = new System.Drawing.Point(432, 93);
+            this.accounttype.Name = "accounttype";
+            this.accounttype.Size = new System.Drawing.Size(121, 21);
+            this.accounttype.TabIndex = 20;
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
+            this.PictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.PictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(45, 38);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox1.TabIndex = 0;
+            this.PictureBox1.TabStop = false;
+            // 
             // Add_user
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 308);
+            this.ControlBox = false;
             this.Controls.Add(this.cmdcancel);
             this.Controls.Add(this.cmdupdate);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.Panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Add_user";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_user";
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -351,7 +352,6 @@
 
         internal System.Windows.Forms.Button cmdcancel;
         internal System.Windows.Forms.Button cmdupdate;
-        internal System.Windows.Forms.ComboBox cmbaccnttype;
         internal System.Windows.Forms.Label Label11;
         internal System.Windows.Forms.TextBox txtconfirm;
         internal System.Windows.Forms.Label Label10;
@@ -374,6 +374,7 @@
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.Panel Panel1;
+        private System.Windows.Forms.ComboBox accounttype;
 
     }
 }

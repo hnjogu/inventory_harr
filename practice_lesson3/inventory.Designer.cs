@@ -34,7 +34,6 @@
             this.productname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.price = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.Submit = new System.Windows.Forms.Button();
             this.close = new System.Windows.Forms.Button();
             this.update = new System.Windows.Forms.Button();
@@ -106,18 +105,6 @@
             this.price.Size = new System.Drawing.Size(74, 20);
             this.price.TabIndex = 5;
             this.price.TextChanged += new System.EventHandler(this.price_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DarkGreen;
-            this.label4.Font = new System.Drawing.Font("Old English Text MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(78, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(354, 34);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Simple Inventory System ";
             // 
             // Submit
             // 
@@ -297,6 +284,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(882, 455);
+            this.ControlBox = false;
             this.Controls.Add(this.product_category);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -316,7 +304,6 @@
             this.Controls.Add(this.update);
             this.Controls.Add(this.close);
             this.Controls.Add(this.Submit);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.price);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.productname);
@@ -325,7 +312,10 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Coral;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "inventory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.inventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataload_inventory)).EndInit();
@@ -342,7 +332,6 @@
         private System.Windows.Forms.TextBox productname;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox price;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Submit;
         private System.Windows.Forms.Button close;
         private System.Windows.Forms.Button update;

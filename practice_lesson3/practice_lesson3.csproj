@@ -95,6 +95,12 @@
     <Compile Include="Add_user.Designer.cs">
       <DependentUpon>Add_user.cs</DependentUpon>
     </Compile>
+    <Compile Include="categoty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="categoty.Designer.cs">
+      <DependentUpon>categoty.cs</DependentUpon>
+    </Compile>
     <Compile Include="home_screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </Compile>
     <EmbeddedResource Include="Add_user.resx">
       <DependentUpon>Add_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="categoty.resx">
+      <DependentUpon>categoty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="home_screen.resx">
       <DependentUpon>home_screen.cs</DependentUpon>
@@ -209,6 +218,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\discount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discount1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel4.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimixe.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
