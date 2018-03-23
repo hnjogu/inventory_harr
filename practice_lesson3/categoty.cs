@@ -89,13 +89,14 @@ namespace practice_lesson3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string valueToSearch = textsearch.Text.ToString();
+            string valueToSearch = textsearchValueToSearch.Text.ToString();
             searchData(valueToSearch);
         }
         public void searchData(string valueToSearch)
         {
-           string query = "SELECT * FROM category_table WHERE CONCAT(categoryNo,category_name,description_category) like '%" + valueToSearch + "%'";
-           command = new MySqlCommand(query, connection);
+            //string query = "SELECT * FROM category_table WHERE CONCAT(`categoryNo`, `category_name`, `description_category`) like '%" + valueToSearch + "%'";
+            string query = "select * from inventory_simple.category_table WHERE CONCAT(`categoryNo`, `category_name`, `description_category`) like '%" + valueToSearch + "%'";
+            command = new MySqlCommand(query, connection);
             adapter = new MySqlDataAdapter(command);
             table = new DataTable();
             adapter.Fill(table);
@@ -103,14 +104,59 @@ namespace practice_lesson3
        }
         private void datasearch_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            
+            //it checks if the row index of the cell is greater than or equal to zero
+            if (e.RowIndex >= 0)
+            {
+                //gets a collection that contains all the rows
+                DataGridViewRow row = this.datasearch.Rows[e.RowIndex];
+                //populate the textbox from specific value of the coordinates of column and row.
+                txtCatName.Text = row.Cells[1].Value.ToString();
+                txtDescription.Text = row.Cells[2].Value.ToString();
+            }
         }
 
         private void categoty_Load(object sender, EventArgs e)
         {
+            
             loaddata();
-            clear();
             searchData("");
+            clear();
+            
+        }
+
+        private void searchload_Click(object sender, EventArgs e)
+        {
+            string valueToSearch = textsearchValueToSearch.Text.ToString();
+            searchData(valueToSearch);
+        }
+
+        private void update_data_Click(object sender, EventArgs e)
+        {
+            string Query = "update inventory_simple.category_table set category_name='" + this.txtCatName.Text + "',description_category='" + this.txtDescription.Text + "' where category_name='" + this.txtCatName.Text + "';";
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(Query, connection);
+
+            try
+            {
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Data have been inserted");
+                    loaddata();
+                    clear();
+                }
+                else
+                {
+                    MessageBox.Show("Data not inserted Please check your Data again before you save");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+            connection.Close();  
         }
     }
 }

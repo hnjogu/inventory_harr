@@ -39,11 +39,14 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.Label6 = new System.Windows.Forms.Label();
-            this.textsearch = new System.Windows.Forms.TextBox();
-            this.search = new System.Windows.Forms.Button();
+            this.textsearchValueToSearch = new System.Windows.Forms.TextBox();
             this.Cancel = new System.Windows.Forms.Button();
             this.Submit = new System.Windows.Forms.Button();
             this.datasearch = new System.Windows.Forms.DataGridView();
+            this.searchload = new System.Windows.Forms.Button();
+            this.update_data = new System.Windows.Forms.Button();
+            this.lblCategoryNo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.GroupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -53,6 +56,8 @@
             // 
             // GroupBox1
             // 
+            this.GroupBox1.Controls.Add(this.lblCategoryNo);
+            this.GroupBox1.Controls.Add(this.label1);
             this.GroupBox1.Controls.Add(this.txtDescription);
             this.GroupBox1.Controls.Add(this.Label2);
             this.GroupBox1.Controls.Add(this.txtCatName);
@@ -87,7 +92,7 @@
             this.txtCatName.BackColor = System.Drawing.Color.White;
             this.txtCatName.Location = new System.Drawing.Point(138, 22);
             this.txtCatName.Name = "txtCatName";
-            this.txtCatName.Size = new System.Drawing.Size(441, 23);
+            this.txtCatName.Size = new System.Drawing.Size(198, 23);
             this.txtCatName.TabIndex = 0;
             // 
             // Label3
@@ -132,9 +137,10 @@
             // 
             // GroupBox2
             // 
+            this.GroupBox2.Controls.Add(this.update_data);
+            this.GroupBox2.Controls.Add(this.searchload);
             this.GroupBox2.Controls.Add(this.Label6);
-            this.GroupBox2.Controls.Add(this.textsearch);
-            this.GroupBox2.Controls.Add(this.search);
+            this.GroupBox2.Controls.Add(this.textsearchValueToSearch);
             this.GroupBox2.Controls.Add(this.Cancel);
             this.GroupBox2.Controls.Add(this.Submit);
             this.GroupBox2.Location = new System.Drawing.Point(30, 192);
@@ -146,28 +152,19 @@
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(12, 21);
+            this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label6.Location = new System.Drawing.Point(5, 19);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(115, 13);
+            this.Label6.Size = new System.Drawing.Size(188, 13);
             this.Label6.TabIndex = 19;
-            this.Label6.Text = "Search  Category No. :";
+            this.Label6.Text = "Enter search Criteria to search.:";
             // 
-            // textsearch
+            // textsearchValueToSearch
             // 
-            this.textsearch.Location = new System.Drawing.Point(138, 19);
-            this.textsearch.Name = "textsearch";
-            this.textsearch.Size = new System.Drawing.Size(92, 20);
-            this.textsearch.TabIndex = 18;
-            // 
-            // search
-            // 
-            this.search.BackgroundImage = global::practice_lesson3.Properties.Resources.search;
-            this.search.Location = new System.Drawing.Point(388, 10);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(45, 35);
-            this.search.TabIndex = 17;
-            this.search.UseVisualStyleBackColor = true;
-            this.search.Click += new System.EventHandler(this.button1_Click);
+            this.textsearchValueToSearch.Location = new System.Drawing.Point(199, 19);
+            this.textsearchValueToSearch.Name = "textsearchValueToSearch";
+            this.textsearchValueToSearch.Size = new System.Drawing.Size(92, 20);
+            this.textsearchValueToSearch.TabIndex = 18;
             // 
             // Cancel
             // 
@@ -194,11 +191,51 @@
             // datasearch
             // 
             this.datasearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datasearch.Location = new System.Drawing.Point(12, 258);
+            this.datasearch.Location = new System.Drawing.Point(104, 258);
             this.datasearch.Name = "datasearch";
-            this.datasearch.Size = new System.Drawing.Size(700, 152);
+            this.datasearch.Size = new System.Drawing.Size(395, 152);
             this.datasearch.TabIndex = 17;
             this.datasearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datasearch_CellContentClick_1);
+            // 
+            // searchload
+            // 
+            this.searchload.BackgroundImage = global::practice_lesson3.Properties.Resources.search;
+            this.searchload.Location = new System.Drawing.Point(322, 10);
+            this.searchload.Name = "searchload";
+            this.searchload.Size = new System.Drawing.Size(45, 37);
+            this.searchload.TabIndex = 20;
+            this.searchload.UseVisualStyleBackColor = true;
+            this.searchload.Click += new System.EventHandler(this.searchload_Click);
+            // 
+            // update_data
+            // 
+            this.update_data.BackColor = System.Drawing.Color.DarkGreen;
+            this.update_data.Location = new System.Drawing.Point(373, 10);
+            this.update_data.Name = "update_data";
+            this.update_data.Size = new System.Drawing.Size(73, 24);
+            this.update_data.TabIndex = 21;
+            this.update_data.Text = "update";
+            this.update_data.UseVisualStyleBackColor = false;
+            this.update_data.Click += new System.EventHandler(this.update_data_Click);
+            // 
+            // lblCategoryNo
+            // 
+            this.lblCategoryNo.BackColor = System.Drawing.Color.White;
+            this.lblCategoryNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCategoryNo.Location = new System.Drawing.Point(463, 23);
+            this.lblCategoryNo.Name = "lblCategoryNo";
+            this.lblCategoryNo.Size = new System.Drawing.Size(156, 22);
+            this.lblCategoryNo.TabIndex = 5;
+            this.lblCategoryNo.Text = " ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(347, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Category No. :";
             // 
             // categoty
             // 
@@ -241,10 +278,13 @@
         internal System.Windows.Forms.GroupBox GroupBox2;
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button Submit;
-        private System.Windows.Forms.Button search;
         internal System.Windows.Forms.Label Label6;
-        private System.Windows.Forms.TextBox textsearch;
+        private System.Windows.Forms.TextBox textsearchValueToSearch;
         private System.Windows.Forms.DataGridView datasearch;
+        private System.Windows.Forms.Button searchload;
+        private System.Windows.Forms.Button update_data;
+        internal System.Windows.Forms.Label lblCategoryNo;
+        internal System.Windows.Forms.Label label1;
 
     }
 }
