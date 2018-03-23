@@ -39,7 +39,7 @@
             this.product_guidebutton = new System.Windows.Forms.Button();
             this.supplier_guidebutton = new System.Windows.Forms.Button();
             this.Adduser_guidebutton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.cateoryguide = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.User_settingsbutton = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -159,16 +159,17 @@
             this.Adduser_guidebutton.Visible = false;
             this.Adduser_guidebutton.Click += new System.EventHandler(this.Adduser_guidebutton_Click);
             // 
-            // button3
+            // cateoryguide
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkGreen;
-            this.button3.Location = new System.Drawing.Point(968, 104);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 25);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Visible = false;
+            this.cateoryguide.BackColor = System.Drawing.Color.DarkGreen;
+            this.cateoryguide.Location = new System.Drawing.Point(968, 104);
+            this.cateoryguide.Name = "cateoryguide";
+            this.cateoryguide.Size = new System.Drawing.Size(73, 25);
+            this.cateoryguide.TabIndex = 23;
+            this.cateoryguide.Text = "category";
+            this.cateoryguide.UseVisualStyleBackColor = false;
+            this.cateoryguide.Visible = false;
+            this.cateoryguide.Click += new System.EventHandler(this.cateory_Click);
             // 
             // button4
             // 
@@ -391,7 +392,7 @@
             this.Controls.Add(this.supplier_guidebutton);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.supplierguide);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.cateoryguide);
             this.Controls.Add(this.product_guidebutton);
             this.Controls.Add(this.productguide);
             this.Controls.Add(this.Sales_label);
@@ -424,7 +425,7 @@
         private System.Windows.Forms.Button product_guidebutton;
         private System.Windows.Forms.Button supplier_guidebutton;
         private System.Windows.Forms.Button Adduser_guidebutton;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button cateoryguide;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button User_settingsbutton;
         private System.Windows.Forms.Button button6;

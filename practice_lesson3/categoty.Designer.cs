@@ -30,54 +30,45 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(categoty));
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblCategoryNo = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.txtCatName = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
-            this.Label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Label6 = new System.Windows.Forms.Label();
+            this.textsearch = new System.Windows.Forms.TextBox();
+            this.search = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.Submit = new System.Windows.Forms.Button();
+            this.datasearch = new System.Windows.Forms.DataGridView();
             this.GroupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datasearch)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox1
             // 
-            this.GroupBox1.Controls.Add(this.lblCategoryNo);
             this.GroupBox1.Controls.Add(this.txtDescription);
             this.GroupBox1.Controls.Add(this.Label2);
             this.GroupBox1.Controls.Add(this.txtCatName);
             this.GroupBox1.Controls.Add(this.Label3);
-            this.GroupBox1.Controls.Add(this.Label6);
             this.GroupBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(30, 91);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(668, 158);
+            this.GroupBox1.Size = new System.Drawing.Size(668, 95);
             this.GroupBox1.TabIndex = 15;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Category Information";
             // 
-            // lblCategoryNo
-            // 
-            this.lblCategoryNo.BackColor = System.Drawing.Color.White;
-            this.lblCategoryNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCategoryNo.Location = new System.Drawing.Point(138, 58);
-            this.lblCategoryNo.Name = "lblCategoryNo";
-            this.lblCategoryNo.Size = new System.Drawing.Size(156, 22);
-            this.lblCategoryNo.TabIndex = 2;
-            this.lblCategoryNo.Text = " ";
-            // 
             // txtDescription
             // 
             this.txtDescription.BackColor = System.Drawing.Color.White;
-            this.txtDescription.Location = new System.Drawing.Point(138, 112);
+            this.txtDescription.Location = new System.Drawing.Point(138, 56);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(441, 23);
             this.txtDescription.TabIndex = 1;
@@ -85,7 +76,7 @@
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(22, 115);
+            this.Label2.Location = new System.Drawing.Point(12, 56);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(92, 16);
             this.Label2.TabIndex = 4;
@@ -94,7 +85,7 @@
             // txtCatName
             // 
             this.txtCatName.BackColor = System.Drawing.Color.White;
-            this.txtCatName.Location = new System.Drawing.Point(138, 85);
+            this.txtCatName.Location = new System.Drawing.Point(138, 22);
             this.txtCatName.Name = "txtCatName";
             this.txtCatName.Size = new System.Drawing.Size(441, 23);
             this.txtCatName.TabIndex = 0;
@@ -102,20 +93,11 @@
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(22, 88);
+            this.Label3.Location = new System.Drawing.Point(12, 25);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(120, 16);
             this.Label3.TabIndex = 4;
             this.Label3.Text = "Category Name :";
-            // 
-            // Label6
-            // 
-            this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(22, 59);
-            this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(106, 16);
-            this.Label6.TabIndex = 3;
-            this.Label6.Text = "Category No. :";
             // 
             // panel2
             // 
@@ -126,6 +108,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(668, 59);
             this.panel2.TabIndex = 14;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(8, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 44);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // lblTitle
             // 
@@ -140,63 +132,81 @@
             // 
             // GroupBox2
             // 
-            this.GroupBox2.Controls.Add(this.button4);
-            this.GroupBox2.Controls.Add(this.button3);
-            this.GroupBox2.Location = new System.Drawing.Point(30, 255);
+            this.GroupBox2.Controls.Add(this.Label6);
+            this.GroupBox2.Controls.Add(this.textsearch);
+            this.GroupBox2.Controls.Add(this.search);
+            this.GroupBox2.Controls.Add(this.Cancel);
+            this.GroupBox2.Controls.Add(this.Submit);
+            this.GroupBox2.Location = new System.Drawing.Point(30, 192);
             this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(668, 90);
+            this.GroupBox2.Size = new System.Drawing.Size(668, 60);
             this.GroupBox2.TabIndex = 16;
             this.GroupBox2.TabStop = false;
             // 
-            // button4
+            // Label6
             // 
-            this.button4.BackColor = System.Drawing.Color.Green;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.button4.Location = new System.Drawing.Point(562, 33);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 25);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "&Cancel";
-            this.button4.UseVisualStyleBackColor = false;
+            this.Label6.AutoSize = true;
+            this.Label6.Location = new System.Drawing.Point(12, 21);
+            this.Label6.Name = "Label6";
+            this.Label6.Size = new System.Drawing.Size(115, 13);
+            this.Label6.TabIndex = 19;
+            this.Label6.Text = "Search  Category No. :";
             // 
-            // button3
+            // textsearch
             // 
-            this.button3.BackColor = System.Drawing.Color.Green;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.button3.Location = new System.Drawing.Point(481, 33);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 25);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "&Save";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.textsearch.Location = new System.Drawing.Point(138, 19);
+            this.textsearch.Name = "textsearch";
+            this.textsearch.Size = new System.Drawing.Size(92, 20);
+            this.textsearch.TabIndex = 18;
             // 
-            // pictureBox2
+            // search
             // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 44);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.search.BackgroundImage = global::practice_lesson3.Properties.Resources.search;
+            this.search.Location = new System.Drawing.Point(388, 10);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(45, 35);
+            this.search.TabIndex = 17;
+            this.search.UseVisualStyleBackColor = true;
+            this.search.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Cancel
+            // 
+            this.Cancel.BackColor = System.Drawing.Color.DarkGreen;
+            this.Cancel.Location = new System.Drawing.Point(551, 10);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(73, 25);
+            this.Cancel.TabIndex = 16;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = false;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click_1);
+            // 
+            // Submit
+            // 
+            this.Submit.BackColor = System.Drawing.Color.DarkGreen;
+            this.Submit.Location = new System.Drawing.Point(463, 10);
+            this.Submit.Name = "Submit";
+            this.Submit.Size = new System.Drawing.Size(73, 25);
+            this.Submit.TabIndex = 15;
+            this.Submit.Text = "Save";
+            this.Submit.UseVisualStyleBackColor = false;
+            this.Submit.Click += new System.EventHandler(this.Submit_Click);
+            // 
+            // datasearch
+            // 
+            this.datasearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datasearch.Location = new System.Drawing.Point(12, 258);
+            this.datasearch.Name = "datasearch";
+            this.datasearch.Size = new System.Drawing.Size(700, 152);
+            this.datasearch.TabIndex = 17;
+            this.datasearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datasearch_CellContentClick_1);
             // 
             // categoty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 365);
+            this.ClientSize = new System.Drawing.Size(724, 413);
             this.ControlBox = false;
+            this.Controls.Add(this.datasearch);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.GroupBox2);
@@ -205,12 +215,15 @@
             this.Name = "categoty";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "categoty";
+            this.Load += new System.EventHandler(this.categoty_Load);
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.GroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.GroupBox2.ResumeLayout(false);
+            this.GroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datasearch)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -218,18 +231,20 @@
         #endregion
 
         internal System.Windows.Forms.GroupBox GroupBox1;
-        internal System.Windows.Forms.Label lblCategoryNo;
         internal System.Windows.Forms.TextBox txtDescription;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.TextBox txtCatName;
         internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.Label Label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblTitle;
         internal System.Windows.Forms.GroupBox GroupBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.Button Submit;
+        private System.Windows.Forms.Button search;
+        internal System.Windows.Forms.Label Label6;
+        private System.Windows.Forms.TextBox textsearch;
+        private System.Windows.Forms.DataGridView datasearch;
 
     }
 }

@@ -124,6 +124,7 @@ namespace practice_lesson3
         private void button1_Click(object sender, EventArgs e)
         {
             product_guidebutton.Visible = true;
+            cateoryguide.Visible = true;
             productguide.Visible = true;
 
         }
@@ -207,6 +208,17 @@ namespace practice_lesson3
             {
                 Application.Exit();
             }
+        }
+
+        private void cateory_Click(object sender, EventArgs e)
+        {
+            categoty categoty = new categoty();
+            categoty.Show();
+            product_guidebutton.Visible = false;
+            cateoryguide.Visible = false;
+            productguide.Visible = false;
+
+
         }   
     }
 }
