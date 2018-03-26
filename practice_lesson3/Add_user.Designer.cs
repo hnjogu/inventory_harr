@@ -51,8 +51,8 @@
             this.Label4 = new System.Windows.Forms.Label();
             this.Label3 = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.Panel1 = new System.Windows.Forms.Panel();
             this.accounttype = new System.Windows.Forms.ComboBox();
+            this.Panel1 = new System.Windows.Forms.Panel();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.GroupBox1.SuspendLayout();
             this.Panel1.SuspendLayout();
@@ -61,6 +61,7 @@
             // 
             // cmdcancel
             // 
+            this.cmdcancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.cmdcancel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdcancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdcancel.Location = new System.Drawing.Point(113, 265);
@@ -68,11 +69,12 @@
             this.cmdcancel.Size = new System.Drawing.Size(69, 26);
             this.cmdcancel.TabIndex = 15;
             this.cmdcancel.Text = "&Cancel";
-            this.cmdcancel.UseVisualStyleBackColor = true;
+            this.cmdcancel.UseVisualStyleBackColor = false;
             this.cmdcancel.Click += new System.EventHandler(this.cmdcancel_Click);
             // 
             // cmdupdate
             // 
+            this.cmdupdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.cmdupdate.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdupdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdupdate.Location = new System.Drawing.Point(38, 265);
@@ -80,7 +82,7 @@
             this.cmdupdate.Size = new System.Drawing.Size(69, 26);
             this.cmdupdate.TabIndex = 14;
             this.cmdupdate.Text = "&Update";
-            this.cmdupdate.UseVisualStyleBackColor = true;
+            this.cmdupdate.UseVisualStyleBackColor = false;
             this.cmdupdate.Click += new System.EventHandler(this.cmdupdate_Click);
             // 
             // Label11
@@ -295,6 +297,15 @@
             this.GroupBox1.TabIndex = 13;
             this.GroupBox1.TabStop = false;
             // 
+            // accounttype
+            // 
+            this.accounttype.FormattingEnabled = true;
+            this.accounttype.Location = new System.Drawing.Point(432, 93);
+            this.accounttype.Name = "accounttype";
+            this.accounttype.Size = new System.Drawing.Size(121, 21);
+            this.accounttype.TabIndex = 20;
+            this.accounttype.SelectedIndexChanged += new System.EventHandler(this.accounttype_SelectedIndexChanged);
+            // 
             // Panel1
             // 
             this.Panel1.Controls.Add(this.Label2);
@@ -304,14 +315,6 @@
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(510, 43);
             this.Panel1.TabIndex = 12;
-            // 
-            // accounttype
-            // 
-            this.accounttype.FormattingEnabled = true;
-            this.accounttype.Location = new System.Drawing.Point(432, 93);
-            this.accounttype.Name = "accounttype";
-            this.accounttype.Size = new System.Drawing.Size(121, 21);
-            this.accounttype.TabIndex = 20;
             // 
             // PictureBox1
             // 
@@ -339,6 +342,7 @@
             this.Name = "Add_user";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_user";
+            this.Load += new System.EventHandler(this.Add_user_Load);
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             this.Panel1.ResumeLayout(false);

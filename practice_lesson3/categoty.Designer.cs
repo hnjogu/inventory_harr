@@ -30,28 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(categoty));
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblCategoryNo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.txtCatName = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
+            this.update_data = new System.Windows.Forms.Button();
             this.Label6 = new System.Windows.Forms.Label();
             this.textsearchValueToSearch = new System.Windows.Forms.TextBox();
             this.Cancel = new System.Windows.Forms.Button();
             this.Submit = new System.Windows.Forms.Button();
             this.datasearch = new System.Windows.Forms.DataGridView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.searchload = new System.Windows.Forms.Button();
-            this.update_data = new System.Windows.Forms.Button();
-            this.lblCategoryNo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.GroupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datasearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox1
@@ -69,6 +69,25 @@
             this.GroupBox1.TabIndex = 15;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Category Information";
+            // 
+            // lblCategoryNo
+            // 
+            this.lblCategoryNo.BackColor = System.Drawing.Color.White;
+            this.lblCategoryNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCategoryNo.Location = new System.Drawing.Point(463, 23);
+            this.lblCategoryNo.Name = "lblCategoryNo";
+            this.lblCategoryNo.Size = new System.Drawing.Size(156, 22);
+            this.lblCategoryNo.TabIndex = 5;
+            this.lblCategoryNo.Text = " ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(347, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Category No. :";
             // 
             // txtDescription
             // 
@@ -114,16 +133,6 @@
             this.panel2.Size = new System.Drawing.Size(668, 59);
             this.panel2.TabIndex = 14;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 44);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -149,6 +158,17 @@
             this.GroupBox2.TabIndex = 16;
             this.GroupBox2.TabStop = false;
             // 
+            // update_data
+            // 
+            this.update_data.BackColor = System.Drawing.Color.DarkGreen;
+            this.update_data.Location = new System.Drawing.Point(373, 10);
+            this.update_data.Name = "update_data";
+            this.update_data.Size = new System.Drawing.Size(73, 24);
+            this.update_data.TabIndex = 21;
+            this.update_data.Text = "update";
+            this.update_data.UseVisualStyleBackColor = false;
+            this.update_data.Click += new System.EventHandler(this.update_data_Click);
+            // 
             // Label6
             // 
             this.Label6.AutoSize = true;
@@ -165,6 +185,7 @@
             this.textsearchValueToSearch.Name = "textsearchValueToSearch";
             this.textsearchValueToSearch.Size = new System.Drawing.Size(92, 20);
             this.textsearchValueToSearch.TabIndex = 18;
+            this.textsearchValueToSearch.TextChanged += new System.EventHandler(this.textsearchValueToSearch_TextChanged);
             // 
             // Cancel
             // 
@@ -197,6 +218,16 @@
             this.datasearch.TabIndex = 17;
             this.datasearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datasearch_CellContentClick_1);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(8, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 44);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
             // searchload
             // 
             this.searchload.BackgroundImage = global::practice_lesson3.Properties.Resources.search;
@@ -206,36 +237,6 @@
             this.searchload.TabIndex = 20;
             this.searchload.UseVisualStyleBackColor = true;
             this.searchload.Click += new System.EventHandler(this.searchload_Click);
-            // 
-            // update_data
-            // 
-            this.update_data.BackColor = System.Drawing.Color.DarkGreen;
-            this.update_data.Location = new System.Drawing.Point(373, 10);
-            this.update_data.Name = "update_data";
-            this.update_data.Size = new System.Drawing.Size(73, 24);
-            this.update_data.TabIndex = 21;
-            this.update_data.Text = "update";
-            this.update_data.UseVisualStyleBackColor = false;
-            this.update_data.Click += new System.EventHandler(this.update_data_Click);
-            // 
-            // lblCategoryNo
-            // 
-            this.lblCategoryNo.BackColor = System.Drawing.Color.White;
-            this.lblCategoryNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCategoryNo.Location = new System.Drawing.Point(463, 23);
-            this.lblCategoryNo.Name = "lblCategoryNo";
-            this.lblCategoryNo.Size = new System.Drawing.Size(156, 22);
-            this.lblCategoryNo.TabIndex = 5;
-            this.lblCategoryNo.Text = " ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(347, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Category No. :";
             // 
             // categoty
             // 
@@ -257,10 +258,10 @@
             this.GroupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.GroupBox2.ResumeLayout(false);
             this.GroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datasearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -15,6 +15,9 @@ namespace practice_lesson3
     public partial class Add_user : Form
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
+        MySqlCommand command;
+        MySqlDataAdapter adapter;
+        DataTable table;
         public Add_user()
         {
             InitializeComponent();
@@ -67,6 +70,19 @@ namespace practice_lesson3
         private void cmdcancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Add_user_Load(object sender, EventArgs e)
+        {
+            //string inserQuery = "INSERT into inventory_simple.employee_table(last_name,first_name,middle_name,address,phone,username,password,confirm,account_type) values('" + txtlname.Text + "','" + txtfname.Text + "','" + txtmname.Text + "','" + txtaddress.Text + "','" + txtcontact.Text + "','" + txtusername.Text + "','" + txtpassword.Text + "','" + txtconfirm.Text + "','" + accounttype.Text + "')";
+            //string Query = "select account_name from inventory_simple.employee_table";
+
+            clear();
+        }
+
+        private void accounttype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

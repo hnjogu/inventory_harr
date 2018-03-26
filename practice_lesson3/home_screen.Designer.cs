@@ -50,6 +50,9 @@
             this.salesguide = new System.Windows.Forms.ListView();
             this.label4 = new System.Windows.Forms.Label();
             this.report = new System.Windows.Forms.Label();
+            this.Account_type_guide = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnPOS = new System.Windows.Forms.Button();
             this.minimize = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -150,7 +153,7 @@
             // Adduser_guidebutton
             // 
             this.Adduser_guidebutton.BackColor = System.Drawing.Color.DarkGreen;
-            this.Adduser_guidebutton.Location = new System.Drawing.Point(877, 277);
+            this.Adduser_guidebutton.Location = new System.Drawing.Point(877, 259);
             this.Adduser_guidebutton.Name = "Adduser_guidebutton";
             this.Adduser_guidebutton.Size = new System.Drawing.Size(73, 25);
             this.Adduser_guidebutton.TabIndex = 22;
@@ -185,7 +188,7 @@
             // User_settingsbutton
             // 
             this.User_settingsbutton.BackColor = System.Drawing.Color.DarkGreen;
-            this.User_settingsbutton.Location = new System.Drawing.Point(968, 277);
+            this.User_settingsbutton.Location = new System.Drawing.Point(968, 259);
             this.User_settingsbutton.Name = "User_settingsbutton";
             this.User_settingsbutton.Size = new System.Drawing.Size(86, 25);
             this.User_settingsbutton.TabIndex = 25;
@@ -271,6 +274,44 @@
             this.report.Size = new System.Drawing.Size(44, 13);
             this.report.TabIndex = 41;
             this.report.Text = "Reports";
+            // 
+            // Account_type_guide
+            // 
+            this.Account_type_guide.BackColor = System.Drawing.Color.DarkGreen;
+            this.Account_type_guide.Location = new System.Drawing.Point(877, 290);
+            this.Account_type_guide.Name = "Account_type_guide";
+            this.Account_type_guide.Size = new System.Drawing.Size(73, 25);
+            this.Account_type_guide.TabIndex = 47;
+            this.Account_type_guide.Text = "Account_Type";
+            this.Account_type_guide.UseVisualStyleBackColor = false;
+            this.Account_type_guide.Visible = false;
+            this.Account_type_guide.Click += new System.EventHandler(this.Account_type_guide_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(670, 393);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "POS";
+            // 
+            // btnPOS
+            // 
+            this.btnPOS.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnPOS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPOS.BackgroundImage")));
+            this.btnPOS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPOS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPOS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnPOS.FlatAppearance.BorderSize = 0;
+            this.btnPOS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
+            this.btnPOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPOS.Location = new System.Drawing.Point(673, 296);
+            this.btnPOS.Name = "btnPOS";
+            this.btnPOS.Size = new System.Drawing.Size(120, 105);
+            this.btnPOS.TabIndex = 48;
+            this.btnPOS.UseVisualStyleBackColor = false;
+            this.btnPOS.Click += new System.EventHandler(this.btnPOS_Click);
             // 
             // minimize
             // 
@@ -373,6 +414,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1066, 453);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnPOS);
+            this.Controls.Add(this.Account_type_guide);
             this.Controls.Add(this.minimize);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.pictureBox2);
@@ -444,6 +488,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button minimize;
+        private System.Windows.Forms.Button Account_type_guide;
+        private System.Windows.Forms.Button btnPOS;
+        private System.Windows.Forms.Label label1;
     }
 }
 

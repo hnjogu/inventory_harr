@@ -139,6 +139,7 @@ namespace practice_lesson3
         {
             Adduser_guidebutton.Visible = true;
             User_settingsbutton.Visible = true;
+            Account_type_guide.Visible = true;
             adduserguide.Visible = true;
             
         }
@@ -154,6 +155,7 @@ namespace practice_lesson3
             inventory inventory = new inventory();
             inventory.Show();
             product_guidebutton.Visible = false;
+            cateoryguide.Visible = false;
             productguide.Visible = false;
             
         }
@@ -173,6 +175,7 @@ namespace practice_lesson3
             Add_user.Show();
             Adduser_guidebutton.Visible = false;
             User_settingsbutton.Visible = false;
+            Account_type_guide.Visible = false;
             adduserguide.Visible = false;
         }
 
@@ -219,6 +222,22 @@ namespace practice_lesson3
             productguide.Visible = false;
 
 
+        }
+
+        private void Account_type_guide_Click(object sender, EventArgs e)
+        {
+            account_type account_type = new account_type();
+            account_type.Show();
+            Adduser_guidebutton.Visible = false;
+            User_settingsbutton.Visible = false;
+            Account_type_guide.Visible = false;
+            adduserguide.Visible = false;
+        }
+
+        private void btnPOS_Click(object sender, EventArgs e)
+        {
+            Point_of_sale Point_of_sale = new Point_of_sale();
+            Point_of_sale.Show();
         }   
     }
 }

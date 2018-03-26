@@ -53,7 +53,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.product_category = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataload_inventory)).BeginInit();
+            this.Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -278,6 +281,27 @@
             this.product_category.Size = new System.Drawing.Size(95, 21);
             this.product_category.TabIndex = 27;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(270, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(157, 23);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Product Entry";
+            // 
+            // Panel1
+            // 
+            this.Panel1.BackColor = System.Drawing.Color.PowderBlue;
+            this.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panel1.Controls.Add(this.label4);
+            this.Panel1.Location = new System.Drawing.Point(60, 1);
+            this.Panel1.Name = "Panel1";
+            this.Panel1.Size = new System.Drawing.Size(647, 31);
+            this.Panel1.TabIndex = 31;
+            // 
             // inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +309,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(882, 455);
             this.ControlBox = false;
+            this.Controls.Add(this.Panel1);
             this.Controls.Add(this.product_category);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -319,6 +344,8 @@
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.inventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataload_inventory)).EndInit();
+            this.Panel1.ResumeLayout(false);
+            this.Panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,6 +378,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox product_category;
+        internal System.Windows.Forms.Label label4;
+        internal System.Windows.Forms.Panel Panel1;
     }
 }
 

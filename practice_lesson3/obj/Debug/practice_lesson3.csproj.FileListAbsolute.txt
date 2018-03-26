@@ -43,3 +43,5 @@ G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Data.Ent
 G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.exe
 G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.pdb
 G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.csprojResolveAssemblyReference.cache
+G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.account_type.resources
+G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.Point_of_sale.resources

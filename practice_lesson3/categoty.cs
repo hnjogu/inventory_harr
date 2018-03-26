@@ -110,6 +110,7 @@ namespace practice_lesson3
                 //gets a collection that contains all the rows
                 DataGridViewRow row = this.datasearch.Rows[e.RowIndex];
                 //populate the textbox from specific value of the coordinates of column and row.
+                lblCategoryNo.Text = row.Cells[0].Value.ToString();
                 txtCatName.Text = row.Cells[1].Value.ToString();
                 txtDescription.Text = row.Cells[2].Value.ToString();
             }
@@ -132,7 +133,7 @@ namespace practice_lesson3
 
         private void update_data_Click(object sender, EventArgs e)
         {
-            string Query = "update inventory_simple.category_table set category_name='" + this.txtCatName.Text + "',description_category='" + this.txtDescription.Text + "' where category_name='" + this.txtCatName.Text + "';";
+            string Query = "update inventory_simple.category_table set 	categoryNo='" + this.lblCategoryNo.Text + "', category_name='" + this.txtCatName.Text + "',description_category='" + this.txtDescription.Text + "' where categoryNo='" + this.lblCategoryNo.Text + "';";
             connection.Open();
             MySqlCommand command = new MySqlCommand(Query, connection);
 
@@ -157,6 +158,11 @@ namespace practice_lesson3
 
 
             connection.Close();  
+        }
+
+        private void textsearchValueToSearch_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
