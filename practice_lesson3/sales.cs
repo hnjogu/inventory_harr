@@ -16,5 +16,21 @@ namespace practice_lesson3
         {
             InitializeComponent();
         }
+
+        private void sales_Load(object sender, EventArgs e)
+        {
+            listloadsales.GridLines = true;
+            listloadsales.View = View.Details;
+
+            listloadsales.Columns.Add("item_id", 150);
+            listloadsales.Columns.Add("item_name", 150);
+            listloadsales.Columns.Add("price", 150);
+            listloadsales.Columns.Add("quantity", 150);
+            listloadsales.Columns.Add("vat", 150);
+            listloadsales.Columns.Add("discount", 150);
+            listloadsales.Columns.Add("totalamountdue", 150);
+            listloadsales.Columns.Add("today_date", 150);
+         
+        }
     }
 }
