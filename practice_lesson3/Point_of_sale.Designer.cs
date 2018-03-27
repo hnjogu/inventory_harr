@@ -59,6 +59,9 @@
             this.txtvat12 = new System.Windows.Forms.TextBox();
             this.txtDiscount = new System.Windows.Forms.TextBox();
             this.txttotalamountdue = new System.Windows.Forms.TextBox();
+            this.txttotalamount = new System.Windows.Forms.TextBox();
+            this.txt_totalamount = new System.Windows.Forms.TextBox();
+            this.buttonrefresh = new System.Windows.Forms.Button();
             this.GroupBox2.SuspendLayout();
             this.Panel1.SuspendLayout();
             this.GroupBox1.SuspendLayout();
@@ -124,15 +127,18 @@
             this.cmdAccept.TabIndex = 112;
             this.cmdAccept.Text = "&Accept";
             this.cmdAccept.UseVisualStyleBackColor = false;
+            this.cmdAccept.Click += new System.EventHandler(this.cmdAccept_Click_1);
             // 
             // txtprice
             // 
             this.txtprice.BackColor = System.Drawing.Color.White;
+            this.txtprice.Enabled = false;
             this.txtprice.Location = new System.Drawing.Point(72, 57);
             this.txtprice.Name = "txtprice";
             this.txtprice.ReadOnly = true;
             this.txtprice.Size = new System.Drawing.Size(100, 20);
             this.txtprice.TabIndex = 113;
+            this.txtprice.Text = "0.00";
             this.txtprice.TextChanged += new System.EventHandler(this.txtprice_TextChanged_1);
             // 
             // Label4
@@ -165,6 +171,7 @@
             // 
             // txtqty
             // 
+            this.txtqty.Enabled = false;
             this.txtqty.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtqty.Location = new System.Drawing.Point(72, 79);
             this.txtqty.MaxLength = 5;
@@ -192,7 +199,7 @@
             this.lbltotalamount.BackColor = System.Drawing.Color.Black;
             this.lbltotalamount.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltotalamount.ForeColor = System.Drawing.Color.White;
-            this.lbltotalamount.Location = new System.Drawing.Point(464, 36);
+            this.lbltotalamount.Location = new System.Drawing.Point(509, 42);
             this.lbltotalamount.Name = "lbltotalamount";
             this.lbltotalamount.Size = new System.Drawing.Size(66, 29);
             this.lbltotalamount.TabIndex = 103;
@@ -216,11 +223,11 @@
             this.lblready.BackColor = System.Drawing.Color.Black;
             this.lblready.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblready.ForeColor = System.Drawing.Color.White;
-            this.lblready.Location = new System.Drawing.Point(108, 38);
+            this.lblready.Location = new System.Drawing.Point(90, 46);
             this.lblready.Name = "lblready";
-            this.lblready.Size = new System.Drawing.Size(95, 26);
+            this.lblready.Size = new System.Drawing.Size(217, 26);
             this.lblready.TabIndex = 102;
-            this.lblready.Text = "Ready . . .";
+            this.lblready.Text = "Total amount to pay . . .";
             // 
             // lblarrow
             // 
@@ -228,7 +235,7 @@
             this.lblarrow.BackColor = System.Drawing.Color.Black;
             this.lblarrow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblarrow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lblarrow.Location = new System.Drawing.Point(19, 42);
+            this.lblarrow.Location = new System.Drawing.Point(10, 45);
             this.lblarrow.Name = "lblarrow";
             this.lblarrow.Size = new System.Drawing.Size(74, 19);
             this.lblarrow.TabIndex = 101;
@@ -313,7 +320,7 @@
             this.Label10.Name = "Label10";
             this.Label10.Size = new System.Drawing.Size(69, 13);
             this.Label10.TabIndex = 110;
-            this.Label10.Text = "VAT - 12 % :";
+            this.Label10.Text = "VAT - 16 % :";
             // 
             // Label12
             // 
@@ -364,32 +371,77 @@
             // 
             // txtvat12
             // 
+            this.txtvat12.Enabled = false;
             this.txtvat12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtvat12.Location = new System.Drawing.Point(456, 16);
             this.txtvat12.Name = "txtvat12";
             this.txtvat12.Size = new System.Drawing.Size(119, 24);
             this.txtvat12.TabIndex = 123;
+            this.txtvat12.Text = "16";
             this.txtvat12.TextChanged += new System.EventHandler(this.txtvat12_TextChanged_2);
             // 
             // txtDiscount
             // 
             this.txtDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtDiscount.Enabled = false;
             this.txtDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiscount.Location = new System.Drawing.Point(456, 47);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(119, 24);
             this.txtDiscount.TabIndex = 124;
+            this.txtDiscount.Text = "200";
+            this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged_1);
             // 
             // txttotalamountdue
             // 
             this.txttotalamountdue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txttotalamountdue.Enabled = false;
             this.txttotalamountdue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttotalamountdue.Location = new System.Drawing.Point(455, 79);
             this.txttotalamountdue.Multiline = true;
             this.txttotalamountdue.Name = "txttotalamountdue";
             this.txttotalamountdue.Size = new System.Drawing.Size(120, 33);
             this.txttotalamountdue.TabIndex = 125;
-            this.txttotalamountdue.Text = "0";
+            this.txttotalamountdue.Text = "0.00";
+            this.txttotalamountdue.TextChanged += new System.EventHandler(this.txttotalamountdue_TextChanged_2);
+            // 
+            // txttotalamount
+            // 
+            this.txttotalamount.BackColor = System.Drawing.SystemColors.MenuText;
+            this.txttotalamount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotalamount.ForeColor = System.Drawing.SystemColors.Info;
+            this.txttotalamount.Location = new System.Drawing.Point(7, 420);
+            this.txttotalamount.Multiline = true;
+            this.txttotalamount.Name = "txttotalamount";
+            this.txttotalamount.Size = new System.Drawing.Size(119, 31);
+            this.txttotalamount.TabIndex = 105;
+            this.txttotalamount.Text = "0.00";
+            this.txttotalamount.Visible = false;
+            this.txttotalamount.TextChanged += new System.EventHandler(this.txttotalamount_TextChanged);
+            // 
+            // txt_totalamount
+            // 
+            this.txt_totalamount.BackColor = System.Drawing.SystemColors.MenuText;
+            this.txt_totalamount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_totalamount.ForeColor = System.Drawing.SystemColors.Info;
+            this.txt_totalamount.Location = new System.Drawing.Point(144, 420);
+            this.txt_totalamount.Multiline = true;
+            this.txt_totalamount.Name = "txt_totalamount";
+            this.txt_totalamount.Size = new System.Drawing.Size(119, 31);
+            this.txt_totalamount.TabIndex = 120;
+            this.txt_totalamount.Text = "0.00";
+            // 
+            // buttonrefresh
+            // 
+            this.buttonrefresh.BackColor = System.Drawing.Color.DarkGreen;
+            this.buttonrefresh.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonrefresh.Location = new System.Drawing.Point(348, 446);
+            this.buttonrefresh.Name = "buttonrefresh";
+            this.buttonrefresh.Size = new System.Drawing.Size(75, 29);
+            this.buttonrefresh.TabIndex = 121;
+            this.buttonrefresh.Text = "&Refresh";
+            this.buttonrefresh.UseVisualStyleBackColor = false;
+            this.buttonrefresh.Click += new System.EventHandler(this.buttonrefresh_Click);
             // 
             // Point_of_sale
             // 
@@ -397,6 +449,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 494);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonrefresh);
+            this.Controls.Add(this.txt_totalamount);
+            this.Controls.Add(this.txttotalamount);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textsearchValueToSearch);
             this.Controls.Add(this.search_load);
@@ -457,6 +512,9 @@
         private System.Windows.Forms.TextBox txttotalamountdue;
         private System.Windows.Forms.TextBox txtDiscount;
         private System.Windows.Forms.TextBox txtvat12;
+        private System.Windows.Forms.TextBox txttotalamount;
+        private System.Windows.Forms.TextBox txt_totalamount;
+        internal System.Windows.Forms.Button buttonrefresh;
 
     }
 }

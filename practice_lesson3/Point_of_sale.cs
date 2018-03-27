@@ -31,21 +31,32 @@ namespace practice_lesson3
         {
             loaddata();
             searchData("");
-            adddata();
             vat_tax = (100 + VAT) / 100;
-            //lbldate.Text = Format(Now, "MM/dd/yyyy");
-            lbldate.Text = DateTime.Now.ToString("d/mm/yyy");
+            //lbldate.Text = Format(Now, "MM/dd/yyyy");//d/m/yyyy
+            lbldate.Text = DateTime.Now.ToString("yyyy-MM-dd");
            
         }
-        private void adddata()
-        {
+        //private void adddata()
+        //{
             //Amount Due
-            txttotalamountdue.Text = Convert.ToString(Convert.ToInt32(txtprice.Text) + Convert.ToInt32(txtvat12.Text) * Convert.ToInt32(txtqty.Text));
-            txtvat12.Text = ("16%");
+          //  txttotalamountdue.Text = Convert.ToString(Convert.ToInt32(txtprice.Text) + Convert.ToInt32(txtvat12.Text) * Convert.ToInt32(txtqty.Text));
+           // txtvat12.Text = ("16%");
 
-        }
+      //  }
         private void clear()
         {
+            //lbltotalamount.Text = "";
+            txtID.Clear();
+            txtname.Clear();
+            txtprice.Clear();
+            txtqty.Clear();
+            //txtvat12.Clear();
+            //txtDiscount.Clear();
+            //txttotalamountdue.Clear();
+            //txttotalamount.Clear();
+           // txt_totalamount.Clear();
+            textsearchValueToSearch.Clear();
+            txtreceiptno.Clear();
 
         }
 
@@ -264,12 +275,12 @@ namespace practice_lesson3
         {
             //txttotalamountdue.Text = Convert.ToString(Convert.ToInt32(txtprice.Text) + Convert.ToInt32(txtvat12.Text) + Convert.ToInt32(txtqty.Text));
             if (!string.IsNullOrEmpty(txtprice.Text) && !string.IsNullOrEmpty(txtqty.Text) && !string.IsNullOrEmpty(txtvat12.Text))
-                txttotalamountdue.Text = (Convert.ToInt32(txtprice.Text) * Convert.ToInt32(txtqty.Text) / Convert.ToInt32(txtvat12.Text)).ToString();
+                txttotalamountdue.Text = (Convert.ToInt32(txtprice.Text) * Convert.ToInt32(txtqty.Text) * Convert.ToInt32(txtvat12.Text)).ToString();
         }
 
         private void txtvat12_TextChanged_1(object sender, EventArgs e)
         {
-            txtvat12.Text = ("16%");
+            //txtvat12.Text = ("16%");
             //txttotalamountdue.Text = Convert.ToString(Convert.ToInt32(txtprice.Text) + Convert.ToInt32(txtvat12.Text) + Convert.ToInt32(txtqty.Text));
         }
 
@@ -279,13 +290,68 @@ namespace practice_lesson3
            // if (!string.IsNullOrEmpty(txtprice.Text) && !string.IsNullOrEmpty(txtqty.Text))
               //  txttotalamountdue.Text = (Convert.ToInt32(txtprice.Text) * Convert.ToInt32(txtqty.Text)).ToString();
             if (!string.IsNullOrEmpty(txtprice.Text) && !string.IsNullOrEmpty(txtqty.Text) && !string.IsNullOrEmpty(txtvat12.Text))
-                txttotalamountdue.Text = (Convert.ToInt32(txtprice.Text) * Convert.ToInt32(txtqty.Text) / Convert.ToInt32(txtvat12.Text)).ToString();
+                txttotalamountdue.Text = (Convert.ToInt32(txtprice.Text) * Convert.ToInt32(txtqty.Text) * Convert.ToInt32(txtvat12.Text)).ToString();
         }
 
         private void txtvat12_TextChanged_2(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtprice.Text) && !string.IsNullOrEmpty(txtqty.Text) && !string.IsNullOrEmpty(txtvat12.Text))
-                txttotalamountdue.Text = (Convert.ToInt32(txtprice.Text) * Convert.ToInt32(txtqty.Text) / Convert.ToInt32(txtvat12.Text)).ToString();
+                txttotalamountdue.Text = (Convert.ToInt32(txtprice.Text) * Convert.ToInt32(txtqty.Text) * Convert.ToInt32(txtvat12.Text)).ToString();
+        }
+
+        private void txtDiscount_TextChanged_1(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txttotalamount.Text) && !string.IsNullOrEmpty(txtDiscount.Text))
+                txt_totalamount.Text = (Convert.ToInt32(txttotalamount.Text) - Convert.ToInt32(txtDiscount.Text)).ToString();
+        }
+
+        private void txttotalamountdue_TextChanged_2(object sender, EventArgs e)
+        {
+            //if (!string.IsNullOrEmpty(txttotalamountdue.Text) && !string.IsNullOrEmpty(txtDiscount.Text))
+                //txttotalamount.Text = (Convert.ToInt32(txttotalamountdue.Text) - Convert.ToInt32(txtDiscount.Text)).ToString();
+            txt_totalamount.Text = txttotalamountdue.Text;
+            lbltotalamount.Text = txttotalamountdue.Text;
+        }
+
+        private void txttotalamount_TextChanged(object sender, EventArgs e)
+        {
+            //if (!string.IsNullOrEmpty(txttotalamount.Text) && !string.IsNullOrEmpty(txtDiscount.Text))
+               // txt_totalamount.Text = (Convert.ToInt32(txttotalamount.Text) - Convert.ToInt32(txtDiscount.Text)).ToString();
+        }
+
+        private void cmdAccept_Click_1(object sender, EventArgs e)
+        {
+            //string inserQuery = "INSERT into inventory_simple.sales_table(item_id,item_name,price,quantity,today_date) values('" + txtprice.Text + "','" + txtqty.Text + "','" + lbldate.Text + "')";
+            string inserQuery = "INSERT into inventory_simple.sales_table(item_id,item_name,price,quantity,vat,discount,totalamountdue,	total_cash,today_date) values('" + txtID.Text + "','" + txtname.Text + "','" + txtprice.Text + "','" + txtqty.Text + "','" + txtvat12.Text + "','" + txtDiscount.Text + "','" + txttotalamountdue.Text + "','" + txt_totalamount.Text + "','" + lbldate.Text + "')";
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(inserQuery, connection);
+
+            try
+            {
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Data have been inserted");
+                    loaddata();
+                    clear();
+                }
+                else
+                {
+                    MessageBox.Show("Data not inserted Please check your Data again before you save");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+            connection.Close();
+        }
+
+        private void buttonrefresh_Click(object sender, EventArgs e)
+        {
+            clear();
         }
     }
 }

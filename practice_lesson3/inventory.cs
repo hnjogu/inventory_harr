@@ -133,6 +133,21 @@ namespace practice_lesson3
 
         private void inventory_Load(object sender, EventArgs e)
         {
+            try
+            {
+                string selectQuery = "SELECT * FROM inventory_simple.category_table";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(selectQuery, connection);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    product_category.Items.Add(reader.GetString("category_name"));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             clear();
             Genarate_productcode();
             loaddata();
@@ -209,6 +224,11 @@ namespace practice_lesson3
             //f.ShowDialog(this);
             searchdialog_box searchdialog_box = new searchdialog_box();
             searchdialog_box.Show();
+        }
+
+        private void product_category_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

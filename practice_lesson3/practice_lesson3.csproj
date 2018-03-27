@@ -53,6 +53,8 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.10\Assemblies\v4.5\MySql.Data.dll</HintPath>
@@ -75,6 +77,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -139,11 +142,11 @@
     <Compile Include="supplier.Designer.cs">
       <DependentUpon>supplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="userlogin.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="userlogin_frm.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="userlogin.Designer.cs">
-      <DependentUpon>userlogin.cs</DependentUpon>
+    <Compile Include="userlogin_frm.Designer.cs">
+      <DependentUpon>userlogin_frm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="account_type.resx">
       <DependentUpon>account_type.cs</DependentUpon>
@@ -173,14 +176,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="sales_report.rdlc" />
     <EmbeddedResource Include="searchdialog_box.resx">
       <DependentUpon>searchdialog_box.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="supplier.resx">
       <DependentUpon>supplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="userlogin.resx">
-      <DependentUpon>userlogin.cs</DependentUpon>
+    <EmbeddedResource Include="userlogin_frm.resx">
+      <DependentUpon>userlogin_frm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

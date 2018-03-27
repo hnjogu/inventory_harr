@@ -74,8 +74,21 @@ namespace practice_lesson3
 
         private void Add_user_Load(object sender, EventArgs e)
         {
-            //string inserQuery = "INSERT into inventory_simple.employee_table(last_name,first_name,middle_name,address,phone,username,password,confirm,account_type) values('" + txtlname.Text + "','" + txtfname.Text + "','" + txtmname.Text + "','" + txtaddress.Text + "','" + txtcontact.Text + "','" + txtusername.Text + "','" + txtpassword.Text + "','" + txtconfirm.Text + "','" + accounttype.Text + "')";
-            //string Query = "select account_name from inventory_simple.employee_table";
+            try
+            {
+                string selectQuery = "SELECT * FROM inventory_simple.account_type_table";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(selectQuery, connection);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    accounttype.Items.Add(reader.GetString("account_name"));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
             clear();
         }

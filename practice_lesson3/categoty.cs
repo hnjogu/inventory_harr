@@ -122,7 +122,8 @@ namespace practice_lesson3
             loaddata();
             searchData("");
             clear();
-            
+
+
         }
 
         private void searchload_Click(object sender, EventArgs e)

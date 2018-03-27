@@ -280,6 +280,7 @@
             this.product_category.Name = "product_category";
             this.product_category.Size = new System.Drawing.Size(95, 21);
             this.product_category.TabIndex = 27;
+            this.product_category.SelectedIndexChanged += new System.EventHandler(this.product_category_SelectedIndexChanged);
             // 
             // label4
             // 
