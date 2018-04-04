@@ -44,8 +44,8 @@ namespace practice_lesson3
             string con1 = "datasource=localhost;port=3306;username=root;password=";
             MySqlConnection cnn = new MySqlConnection(con1);
             cnn.Open();
-
-            string sql = "Select * from inventory_simple.sales_table";
+            //string sql = "Select * from inventory_simple.sales_table";
+            string sql = "Select item_id,item_name,price,quantity,vat,discount,totalamountdue,today_date from inventory_simple.sales_table";
             MySqlCommand cmd = new MySqlCommand(sql, cnn);
             MySqlDataReader Reader = cmd.ExecuteReader();
 
@@ -72,10 +72,35 @@ namespace practice_lesson3
 
         private void refresh_sales_Click(object sender, EventArgs e)
         {
+            string con1 = "datasource=localhost;port=3306;username=root;password=";
+            MySqlConnection cnn = new MySqlConnection(con1);
+            cnn.Open();
+            //string sql = "Select * from inventory_simple.sales_table";
+            string sql = "Select item_id,item_name,price,quantity,vat,discount,totalamountdue,today_date from inventory_simple.sales_table";
+            MySqlCommand cmd = new MySqlCommand(sql, cnn);
+            MySqlDataReader Reader = cmd.ExecuteReader();
 
+            listloadsales.Items.Clear();
+
+            while (Reader.Read())
+            {
+                ListViewItem lv = new ListViewItem(Reader.GetInt32(0).ToString());
+                lv.SubItems.Add(Reader.GetString(1));
+                lv.SubItems.Add(Reader.GetString(2));
+                listloadsales.Items.Add(lv);
+
+            }
+            Reader.Close();
+            cmd.Dispose();
+            cnn.Close();
         }
 
         private void cancel_sales_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmdclose_Click(object sender, EventArgs e)
         {
             this.Close();
         }

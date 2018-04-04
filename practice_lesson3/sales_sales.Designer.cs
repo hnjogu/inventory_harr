@@ -69,6 +69,7 @@
             this.cmdclose.TabIndex = 114;
             this.cmdclose.Text = "&Close";
             this.cmdclose.UseVisualStyleBackColor = false;
+            this.cmdclose.Click += new System.EventHandler(this.cmdclose_Click);
             // 
             // label1
             // 
