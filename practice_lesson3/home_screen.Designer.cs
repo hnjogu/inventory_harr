@@ -42,12 +42,9 @@
             this.cateoryguide = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.User_settingsbutton = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.sale_guidebutton = new System.Windows.Forms.Button();
             this.productguide = new System.Windows.Forms.ListView();
             this.supplierguide = new System.Windows.Forms.ListView();
             this.adduserguide = new System.Windows.Forms.ListView();
-            this.salesguide = new System.Windows.Forms.ListView();
             this.label4 = new System.Windows.Forms.Label();
             this.report = new System.Windows.Forms.Label();
             this.Account_type_guide = new System.Windows.Forms.Button();
@@ -196,28 +193,6 @@
             this.User_settingsbutton.UseVisualStyleBackColor = false;
             this.User_settingsbutton.Visible = false;
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.DarkGreen;
-            this.button6.Location = new System.Drawing.Point(968, 360);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(73, 25);
-            this.button6.TabIndex = 28;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Visible = false;
-            // 
-            // sale_guidebutton
-            // 
-            this.sale_guidebutton.BackColor = System.Drawing.Color.DarkGreen;
-            this.sale_guidebutton.Location = new System.Drawing.Point(877, 360);
-            this.sale_guidebutton.Name = "sale_guidebutton";
-            this.sale_guidebutton.Size = new System.Drawing.Size(73, 25);
-            this.sale_guidebutton.TabIndex = 27;
-            this.sale_guidebutton.Text = "Sales";
-            this.sale_guidebutton.UseVisualStyleBackColor = false;
-            this.sale_guidebutton.Visible = false;
-            this.sale_guidebutton.Click += new System.EventHandler(this.sale_guidebutton_Click);
-            // 
             // productguide
             // 
             this.productguide.Location = new System.Drawing.Point(877, 92);
@@ -244,15 +219,6 @@
             this.adduserguide.TabIndex = 32;
             this.adduserguide.UseCompatibleStateImageBehavior = false;
             this.adduserguide.Visible = false;
-            // 
-            // salesguide
-            // 
-            this.salesguide.Location = new System.Drawing.Point(877, 345);
-            this.salesguide.Name = "salesguide";
-            this.salesguide.Size = new System.Drawing.Size(177, 56);
-            this.salesguide.TabIndex = 33;
-            this.salesguide.UseCompatibleStateImageBehavior = false;
-            this.salesguide.Visible = false;
             // 
             // label4
             // 
@@ -358,6 +324,7 @@
             this.btnReport.Size = new System.Drawing.Size(120, 110);
             this.btnReport.TabIndex = 40;
             this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // sales_button
             // 
@@ -427,9 +394,6 @@
             this.Controls.Add(this.adduser_button);
             this.Controls.Add(this.suppliers_button);
             this.Controls.Add(this.product_button);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.sale_guidebutton);
-            this.Controls.Add(this.salesguide);
             this.Controls.Add(this.User_settingsbutton);
             this.Controls.Add(this.Adduser_guidebutton);
             this.Controls.Add(this.adduserguide);
@@ -472,12 +436,9 @@
         private System.Windows.Forms.Button cateoryguide;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button User_settingsbutton;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button sale_guidebutton;
         private System.Windows.Forms.ListView productguide;
         private System.Windows.Forms.ListView supplierguide;
         private System.Windows.Forms.ListView adduserguide;
-        private System.Windows.Forms.ListView salesguide;
         private System.Windows.Forms.Button product_button;
         private System.Windows.Forms.Button suppliers_button;
         private System.Windows.Forms.Button adduser_button;

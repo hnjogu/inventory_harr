@@ -31,6 +31,7 @@ G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesso
 G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.Properties.Resources.resources
 G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.searchdialog_box.resources
 G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.supplier.resources
+G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.userlogin_frm.resources
 G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.csproj.GenerateResource.Cache
 G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\RdlCompile.cache
 G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\RdlCompile.compiled
@@ -43,7 +44,6 @@ G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Fabric.P
 G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\Zen.Barcode.Core.dll
 G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Data.Entity.EF5.xml
 G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Data.Entity.EF6.xml
-G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.csprojResolveAssemblyReference.cache
-G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.userlogin_frm.resources
+G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.sales_sales.resources
 G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.exe
 G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.pdb

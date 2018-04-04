@@ -12,13 +12,13 @@ using MySql.Data.MySqlClient;
 
 namespace practice_lesson3
 {
-    public partial class sales : Form
+    public partial class sales_sales : Form
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
         MySqlCommand command;
         MySqlDataAdapter adapter;
         DataTable table;
-        public sales()
+        public sales_sales()
         {
             InitializeComponent();
         }

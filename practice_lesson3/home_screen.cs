@@ -146,8 +146,8 @@ namespace practice_lesson3
 
         private void sales_button_Click(object sender, EventArgs e)
         {
-           sale_guidebutton.Visible = true;
-           salesguide.Visible = true;
+            sales_sales sales_sales = new sales_sales();
+            sales_sales.Show();
         }
 
         private void product_guidebutton_Click(object sender, EventArgs e)
@@ -238,6 +238,11 @@ namespace practice_lesson3
         {
             Point_of_sale Point_of_sale = new Point_of_sale();
             Point_of_sale.Show();
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+
         }   
     }
 }

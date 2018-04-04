@@ -1,6 +1,6 @@
 ﻿namespace practice_lesson3
 {
-    partial class sales
+    partial class sales_sales
     {
         /// <summary>
         /// Required designer variable.
@@ -119,7 +119,7 @@
             this.refresh_sales.UseVisualStyleBackColor = false;
             this.refresh_sales.Click += new System.EventHandler(this.refresh_sales_Click);
             // 
-            // sales
+            // sales_sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,9 +133,9 @@
             this.Controls.Add(this.listloadsales);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "sales";
+            this.Name = "sales_sales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "sales";
+            this.Text = "sales_sales";
             this.Load += new System.EventHandler(this.sales_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
