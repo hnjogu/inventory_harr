@@ -47,3 +47,4 @@ G:\projects_c#\simple_inventory_system\practice_lesson3\bin\Debug\MySql.Data.Ent
 G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.sales_sales.resources
 G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.exe
 G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.pdb
+G:\projects_c#\simple_inventory_system\practice_lesson3\obj\Debug\practice_lesson3.csprojResolveAssemblyReference.cache

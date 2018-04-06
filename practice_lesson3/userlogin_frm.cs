@@ -59,7 +59,13 @@ namespace practice_lesson3
 
         private void cmdcancel_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+           // Application.Exit();
+            DialogResult iExit;
+            iExit = MessageBox.Show("A you sure you don't want to proceed", "system down", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (iExit == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void txtusername_TextChanged(object sender, EventArgs e)

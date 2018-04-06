@@ -207,10 +207,17 @@ namespace practice_lesson3
 
         private void cancel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("A you sure you want to exit");
+            //MessageBox.Show("A you sure you want to exit");
+           // {
+               // Application.Exit();
+           // }
+            DialogResult iExit;
+            iExit = MessageBox.Show("A you sure you want to exit" , "system down" ,MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (iExit == DialogResult.Yes)
             {
                 Application.Exit();
             }
+
         }
 
         private void cateory_Click(object sender, EventArgs e)

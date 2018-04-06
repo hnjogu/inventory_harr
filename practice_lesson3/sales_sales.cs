@@ -56,6 +56,11 @@ namespace practice_lesson3
                 ListViewItem lv = new ListViewItem(Reader.GetInt32(0).ToString());
                 lv.SubItems.Add(Reader.GetString(1));
                 lv.SubItems.Add(Reader.GetString(2));
+                lv.SubItems.Add(Reader.GetString(3));
+                lv.SubItems.Add(Reader.GetString(4));
+                lv.SubItems.Add(Reader.GetString(5));
+                lv.SubItems.Add(Reader.GetString(6));
+                lv.SubItems.Add(Reader.GetString(7));
                 listloadsales.Items.Add(lv);
 
             }
@@ -87,6 +92,11 @@ namespace practice_lesson3
                 ListViewItem lv = new ListViewItem(Reader.GetInt32(0).ToString());
                 lv.SubItems.Add(Reader.GetString(1));
                 lv.SubItems.Add(Reader.GetString(2));
+                lv.SubItems.Add(Reader.GetString(3));
+                lv.SubItems.Add(Reader.GetString(4));
+                lv.SubItems.Add(Reader.GetString(5));
+                lv.SubItems.Add(Reader.GetString(6));
+                lv.SubItems.Add(Reader.GetString(7));
                 listloadsales.Items.Add(lv);
 
             }
