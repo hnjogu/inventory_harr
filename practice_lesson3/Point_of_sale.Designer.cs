@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataloadPOS = new System.Windows.Forms.DataGridView();
             this.txtreceiptno = new System.Windows.Forms.TextBox();
             this.Label14 = new System.Windows.Forms.Label();
             this.Label13 = new System.Windows.Forms.Label();
@@ -47,25 +48,24 @@
             this.lblbarcode = new System.Windows.Forms.Label();
             this.TextBox1 = new System.Windows.Forms.TextBox();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.txttotalamountdue = new System.Windows.Forms.TextBox();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
+            this.txtvat12 = new System.Windows.Forms.TextBox();
             this.Label5 = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.Label10 = new System.Windows.Forms.Label();
             this.Label12 = new System.Windows.Forms.Label();
-            this.dataloadPOS = new System.Windows.Forms.DataGridView();
             this.search_load = new System.Windows.Forms.Button();
             this.textsearchValueToSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtvat12 = new System.Windows.Forms.TextBox();
-            this.txtDiscount = new System.Windows.Forms.TextBox();
-            this.txttotalamountdue = new System.Windows.Forms.TextBox();
             this.txttotalamount = new System.Windows.Forms.TextBox();
             this.txt_totalamount = new System.Windows.Forms.TextBox();
             this.buttonrefresh = new System.Windows.Forms.Button();
             this.GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataloadPOS)).BeginInit();
             this.Panel1.SuspendLayout();
             this.GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataloadPOS)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox2
@@ -76,6 +76,15 @@
             this.GroupBox2.Size = new System.Drawing.Size(600, 157);
             this.GroupBox2.TabIndex = 111;
             this.GroupBox2.TabStop = false;
+            // 
+            // dataloadPOS
+            // 
+            this.dataloadPOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataloadPOS.Location = new System.Drawing.Point(6, 10);
+            this.dataloadPOS.Name = "dataloadPOS";
+            this.dataloadPOS.Size = new System.Drawing.Size(591, 141);
+            this.dataloadPOS.TabIndex = 0;
+            this.dataloadPOS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataloadPOS_CellContentClick);
             // 
             // txtreceiptno
             // 
@@ -171,7 +180,6 @@
             // 
             // txtqty
             // 
-            this.txtqty.Enabled = false;
             this.txtqty.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtqty.Location = new System.Drawing.Point(72, 79);
             this.txtqty.MaxLength = 5;
@@ -285,6 +293,42 @@
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter_1);
             // 
+            // txttotalamountdue
+            // 
+            this.txttotalamountdue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txttotalamountdue.Enabled = false;
+            this.txttotalamountdue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotalamountdue.Location = new System.Drawing.Point(455, 79);
+            this.txttotalamountdue.Multiline = true;
+            this.txttotalamountdue.Name = "txttotalamountdue";
+            this.txttotalamountdue.Size = new System.Drawing.Size(120, 33);
+            this.txttotalamountdue.TabIndex = 125;
+            this.txttotalamountdue.Text = "0.00";
+            this.txttotalamountdue.TextChanged += new System.EventHandler(this.txttotalamountdue_TextChanged_2);
+            // 
+            // txtDiscount
+            // 
+            this.txtDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtDiscount.Enabled = false;
+            this.txtDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiscount.Location = new System.Drawing.Point(456, 47);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(119, 24);
+            this.txtDiscount.TabIndex = 124;
+            this.txtDiscount.Text = "200";
+            this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged_1);
+            // 
+            // txtvat12
+            // 
+            this.txtvat12.Enabled = false;
+            this.txtvat12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtvat12.Location = new System.Drawing.Point(456, 16);
+            this.txtvat12.Name = "txtvat12";
+            this.txtvat12.Size = new System.Drawing.Size(119, 24);
+            this.txtvat12.TabIndex = 123;
+            this.txtvat12.Text = "16";
+            this.txtvat12.TextChanged += new System.EventHandler(this.txtvat12_TextChanged_2);
+            // 
             // Label5
             // 
             this.Label5.AutoSize = true;
@@ -332,15 +376,6 @@
             this.Label12.TabIndex = 115;
             this.Label12.Text = "Receipt No :";
             // 
-            // dataloadPOS
-            // 
-            this.dataloadPOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataloadPOS.Location = new System.Drawing.Point(6, 10);
-            this.dataloadPOS.Name = "dataloadPOS";
-            this.dataloadPOS.Size = new System.Drawing.Size(591, 141);
-            this.dataloadPOS.TabIndex = 0;
-            this.dataloadPOS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataloadPOS_CellContentClick);
-            // 
             // search_load
             // 
             this.search_load.BackColor = System.Drawing.Color.DarkGreen;
@@ -368,42 +403,6 @@
             this.label1.Size = new System.Drawing.Size(271, 19);
             this.label1.TabIndex = 119;
             this.label1.Text = "Enter the product code for sale";
-            // 
-            // txtvat12
-            // 
-            this.txtvat12.Enabled = false;
-            this.txtvat12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtvat12.Location = new System.Drawing.Point(456, 16);
-            this.txtvat12.Name = "txtvat12";
-            this.txtvat12.Size = new System.Drawing.Size(119, 24);
-            this.txtvat12.TabIndex = 123;
-            this.txtvat12.Text = "16";
-            this.txtvat12.TextChanged += new System.EventHandler(this.txtvat12_TextChanged_2);
-            // 
-            // txtDiscount
-            // 
-            this.txtDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtDiscount.Enabled = false;
-            this.txtDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiscount.Location = new System.Drawing.Point(456, 47);
-            this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(119, 24);
-            this.txtDiscount.TabIndex = 124;
-            this.txtDiscount.Text = "200";
-            this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged_1);
-            // 
-            // txttotalamountdue
-            // 
-            this.txttotalamountdue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txttotalamountdue.Enabled = false;
-            this.txttotalamountdue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotalamountdue.Location = new System.Drawing.Point(455, 79);
-            this.txttotalamountdue.Multiline = true;
-            this.txttotalamountdue.Name = "txttotalamountdue";
-            this.txttotalamountdue.Size = new System.Drawing.Size(120, 33);
-            this.txttotalamountdue.TabIndex = 125;
-            this.txttotalamountdue.Text = "0.00";
-            this.txttotalamountdue.TextChanged += new System.EventHandler(this.txttotalamountdue_TextChanged_2);
             // 
             // txttotalamount
             // 
@@ -469,11 +468,11 @@
             this.Text = "Point_of_sale";
             this.Load += new System.EventHandler(this.Point_of_sale_Load);
             this.GroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataloadPOS)).EndInit();
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataloadPOS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

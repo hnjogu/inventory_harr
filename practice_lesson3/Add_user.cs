@@ -25,9 +25,10 @@ namespace practice_lesson3
 
         private void cmdupdate_Click(object sender, EventArgs e)
         {
+            MySqlConnection connection_1 = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
             string inserQuery = "INSERT into inventory_simple.employee_table(last_name,first_name,middle_name,address,phone,username,password,confirm,account_type) values('" + txtlname.Text + "','" + txtfname.Text + "','" + txtmname.Text + "','" + txtaddress.Text + "','" + txtcontact.Text + "','" + txtusername.Text + "','" + txtpassword.Text + "','" + txtconfirm.Text + "','" + accounttype.Text + "')";
-            connection.Open();
-            MySqlCommand command = new MySqlCommand(inserQuery, connection);
+            connection_1.Open();
+            MySqlCommand command = new MySqlCommand(inserQuery, connection_1);
 
             try
             {
@@ -49,7 +50,7 @@ namespace practice_lesson3
 
 
 
-            connection.Close();
+            connection_1.Close();
 
         }
         private void clear()

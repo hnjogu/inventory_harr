@@ -249,6 +249,29 @@ namespace practice_lesson3
 
         private void btnReport_Click(object sender, EventArgs e)
         {
+            salesreports salesreports = new salesreports();
+            salesreports.Show();
+        }
+
+        private void statusStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabel.Text = DateTime.Now.ToString();
+            lbltime.Text = System.DateTime.Now.ToString();
+        }
+
+        private void home_screen_Load(object sender, EventArgs e)
+        {
+            lbltime.Text = System.DateTime.Now.ToString();
+            lblday.Text = System.DateTime.Now.DayOfWeek.ToString();
+        }
+
+        private void toolStripStatusLabel_Click(object sender, EventArgs e)
+        {
 
         }   
     }

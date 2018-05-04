@@ -55,6 +55,8 @@
             this.product_category = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.add_supplier = new System.Windows.Forms.Button();
+            this.product_id = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataload_inventory)).BeginInit();
             this.Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -235,7 +237,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(488, 103);
+            this.label9.Location = new System.Drawing.Point(561, 87);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 13);
             this.label9.TabIndex = 21;
@@ -250,7 +252,7 @@
             // 
             // company
             // 
-            this.company.Location = new System.Drawing.Point(762, 51);
+            this.company.Location = new System.Drawing.Point(762, 54);
             this.company.Name = "company";
             this.company.Size = new System.Drawing.Size(95, 20);
             this.company.TabIndex = 23;
@@ -258,7 +260,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(671, 54);
+            this.label10.Location = new System.Drawing.Point(705, 57);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 13);
             this.label10.TabIndex = 25;
@@ -267,7 +269,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(661, 107);
+            this.label11.Location = new System.Drawing.Point(664, 106);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(92, 13);
             this.label11.TabIndex = 26;
@@ -276,7 +278,7 @@
             // product_category
             // 
             this.product_category.FormattingEnabled = true;
-            this.product_category.Location = new System.Drawing.Point(762, 104);
+            this.product_category.Location = new System.Drawing.Point(762, 100);
             this.product_category.Name = "product_category";
             this.product_category.Size = new System.Drawing.Size(95, 21);
             this.product_category.TabIndex = 27;
@@ -303,6 +305,24 @@
             this.Panel1.Size = new System.Drawing.Size(647, 31);
             this.Panel1.TabIndex = 31;
             // 
+            // add_supplier
+            // 
+            this.add_supplier.BackgroundImage = global::practice_lesson3.Properties.Resources.button_plus_blue;
+            this.add_supplier.Location = new System.Drawing.Point(488, 91);
+            this.add_supplier.Name = "add_supplier";
+            this.add_supplier.Size = new System.Drawing.Size(50, 36);
+            this.add_supplier.TabIndex = 32;
+            this.add_supplier.UseVisualStyleBackColor = true;
+            this.add_supplier.Click += new System.EventHandler(this.add_supplier_Click);
+            // 
+            // product_id
+            // 
+            this.product_id.AutoSize = true;
+            this.product_id.Location = new System.Drawing.Point(90, 143);
+            this.product_id.Name = "product_id";
+            this.product_id.Size = new System.Drawing.Size(0, 13);
+            this.product_id.TabIndex = 33;
+            // 
             // inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +330,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(882, 455);
             this.ControlBox = false;
+            this.Controls.Add(this.product_id);
+            this.Controls.Add(this.add_supplier);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.product_category);
             this.Controls.Add(this.label11);
@@ -381,6 +403,8 @@
         private System.Windows.Forms.ComboBox product_category;
         internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.Panel Panel1;
+        private System.Windows.Forms.Button add_supplier;
+        private System.Windows.Forms.Label product_id;
     }
 }
 

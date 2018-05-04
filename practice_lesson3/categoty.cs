@@ -165,5 +165,10 @@ namespace practice_lesson3
         {
 
         }
+
+        private void refresh_category_Click(object sender, EventArgs e)
+        {
+            loaddata();
+        }
     }
 }

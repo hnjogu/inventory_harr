@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(home_screen));
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -58,6 +59,9 @@
             this.adduser_button = new System.Windows.Forms.Button();
             this.suppliers_button = new System.Windows.Forms.Button();
             this.product_button = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblday = new System.Windows.Forms.Label();
+            this.lbltime = new System.Windows.Forms.Label();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -68,15 +72,17 @@
             this.toolStripStatusLabel});
             this.statusStrip.Location = new System.Drawing.Point(0, 431);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1066, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1220, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
+            this.statusStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip_ItemClicked);
             // 
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
+            this.toolStripStatusLabel.Click += new System.EventHandler(this.toolStripStatusLabel_Click);
             // 
             // dashboard
             // 
@@ -375,12 +381,41 @@
             this.product_button.BackColorChanged += new System.EventHandler(this.CutToolStripMenuItem_Click);
             this.product_button.Click += new System.EventHandler(this.button1_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblday
+            // 
+            this.lblday.AutoSize = true;
+            this.lblday.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblday.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblday.Location = new System.Drawing.Point(1149, 25);
+            this.lblday.Name = "lblday";
+            this.lblday.Size = new System.Drawing.Size(46, 17);
+            this.lblday.TabIndex = 51;
+            this.lblday.Text = "label4";
+            // 
+            // lbltime
+            // 
+            this.lbltime.AutoSize = true;
+            this.lbltime.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lbltime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltime.Location = new System.Drawing.Point(1148, 45);
+            this.lbltime.Name = "lbltime";
+            this.lbltime.Size = new System.Drawing.Size(46, 17);
+            this.lbltime.TabIndex = 50;
+            this.lbltime.Text = "label3";
+            // 
             // home_screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 453);
+            this.ClientSize = new System.Drawing.Size(1220, 453);
             this.ControlBox = false;
+            this.Controls.Add(this.lblday);
+            this.Controls.Add(this.lbltime);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPOS);
             this.Controls.Add(this.Account_type_guide);
@@ -414,6 +449,7 @@
             this.Name = "home_screen";
             this.Text = "home_screen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.home_screen_Load);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -452,6 +488,9 @@
         private System.Windows.Forms.Button Account_type_guide;
         private System.Windows.Forms.Button btnPOS;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblday;
+        private System.Windows.Forms.Label lbltime;
     }
 }
 

@@ -166,6 +166,7 @@ namespace practice_lesson3
         private void refresh_Click(object sender, EventArgs e)
         {
             clear();
+            loaddata();
         }
 
         private void dataload_supplier_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -219,6 +220,11 @@ namespace practice_lesson3
 
 
             connection.Close(); 
+        }
+
+        private void textsearchValueToSearch_TextChanged(object sender, EventArgs e)
+        {
+
         }
         
     }

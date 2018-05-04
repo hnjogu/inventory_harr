@@ -15,6 +15,9 @@ namespace practice_lesson3
     public partial class inventory : Form
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
+        MySqlCommand command;
+        MySqlDataAdapter adapter;
+        DataTable table;
         //String MyConnectionString = "Server=localhost;port=3306;username=root;password=";
         public inventory()
         {
@@ -118,7 +121,7 @@ namespace practice_lesson3
         {
             string connectionString = "datasource=localhost;port=3306;username=root;password="; //Set your MySQL connection string here.
             //string query = "select * from inventory_simple.inventory_table"; // set query to fetch data "Select * from tabelname"; 
-            string query = "select product_code,product_name,price,entry_date,expiry_date,manufacturer,company,product_category from inventory_simple.inventory_table ";
+            string query = "select product_code,product_name,price,entry_date,quantity,suplier_code,Expiry_date,manufacturer,company,product_category from inventory_simple.inventory_table ";
             using (MySqlConnection conn = new MySqlConnection(connectionString))//using (MySqlConnection conn = new MySqlConnection(connStr))
             {
                 using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
@@ -164,6 +167,10 @@ namespace practice_lesson3
                 product_code.Text = row.Cells[0].Value.ToString();
                 productname.Text = row.Cells[1].Value.ToString();
                 price.Text = row.Cells[2].Value.ToString();
+                quantity.Text = row.Cells[4].Value.ToString();
+                suplier.Text = row.Cells[5].Value.ToString();
+                manufacturer.Text = row.Cells[7].Value.ToString();
+                company.Text = row.Cells[8].Value.ToString();
             }
  
         }
@@ -181,9 +188,10 @@ namespace practice_lesson3
 
         private void update_Click(object sender, EventArgs e)
         {
-            string updateQuery = "update inventory_simple.inventory_table set product_code='" + this.product_code.Text + "',product_name='" + this.productname.Text+ "',entry_date='" + this.entry_date.Text + "',price='" + this.price.Text + "';";
-            connection.Open();
-            MySqlCommand command = new MySqlCommand(updateQuery, connection);
+            MySqlConnection myconnection = new MySqlConnection("datasource=localhost;port=3306;username=root;password="); 
+            string Query = "update inventory_simple.inventory_table set 	product_code='" + this.product_code.Text + "', product_name='" + this.productname.Text + "',price='" + this.price.Text + "',entry_date='" + this.entry_date.Text + "',quantity='" + this.quantity.Text + "',suplier_code='" + this.suplier.Text + "',Expiry_date='" + this.Expiry_date.Text + "',manufacturer='" + this.manufacturer.Text + "',company='" + this.company.Text + "',product_category='" + this.product_category.Text + "' where product_code='" + this.product_code.Text + "';";
+            myconnection.Open();
+            MySqlCommand command = new MySqlCommand(Query, myconnection);
 
             try
             {
@@ -205,7 +213,7 @@ namespace practice_lesson3
 
 
 
-            connection.Close();
+            connection.Close(); 
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -222,13 +230,19 @@ namespace practice_lesson3
         {
             //Form f = new Form();
             //f.ShowDialog(this);
-            searchdialog_box searchdialog_box = new searchdialog_box();
-            searchdialog_box.Show();
+            
         }
 
         private void product_category_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void add_supplier_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            searchdialog_box searchdialog_box = new searchdialog_box();
+            searchdialog_box.Show();
         }
     }
 }
